@@ -1,0 +1,17 @@
+C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Application\bin\Debug\net7.0\GeneralPolls.Application.deps.json
+C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Application\bin\Debug\net7.0\GeneralPolls.Application.runtimeconfig.json
+C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Application\bin\Debug\net7.0\GeneralPolls.Application.dll
+C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Application\bin\Debug\net7.0\GeneralPolls.Application.pdb
+C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Application\bin\Debug\net7.0\GeneralPolls.Core.dll
+C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Application\bin\Debug\net7.0\GeneralPolls.Core.pdb
+C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Application\obj\Debug\net7.0\GeneralPolls.Application.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Application\obj\Debug\net7.0\GeneralPolls.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Application\obj\Debug\net7.0\GeneralPolls.Application.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Application\obj\Debug\net7.0\GeneralPolls.Application.AssemblyInfo.cs
+C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Application\obj\Debug\net7.0\GeneralPolls.Application.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Application\obj\Debug\net7.0\GeneralPolls.Application.csproj.CopyComplete
+C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Application\obj\Debug\net7.0\GeneralPolls.Application.dll
+C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Application\obj\Debug\net7.0\refint\GeneralPolls.Application.dll
+C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Application\obj\Debug\net7.0\GeneralPolls.Application.pdb
+C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Application\obj\Debug\net7.0\GeneralPolls.Application.genruntimeconfig.cache
+C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Application\obj\Debug\net7.0\ref\GeneralPolls.Application.dll

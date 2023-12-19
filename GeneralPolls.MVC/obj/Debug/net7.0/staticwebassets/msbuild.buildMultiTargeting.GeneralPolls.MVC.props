@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\GeneralPolls.MVC.props" />
+</Project>
