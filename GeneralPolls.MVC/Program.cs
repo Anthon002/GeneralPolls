@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using GeneralPolls.Core.Models;
 using GeneralPolls.Application.Services.Interfaces;
 using GeneralPolls.Application.Services.Classes;
+using GeneralPolls.Application.IRepositories;
+using GeneralPolls.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,12 +18,15 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("GeneralPolls.Infrastructure"));
 });
 
-//builder.Services.AddIdentity<ApplicationUser,IdentityRole>( options =>
-//{
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+    {
 
-//}).AddEntityFrameworkStores<ApplicationDbContext>();
+}).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+
 //builder.Services.AddScoped<DbContext, ApplicationDbContext>();
-//builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
+builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
+builder.Services.AddScoped<IGeneralPolls, GeneralPollsService>();
+builder.Services.AddTransient<IGeneralPollsRepository, GeneralPollsRepository>();
 
 var app = builder.Build();
 
@@ -34,7 +39,6 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 

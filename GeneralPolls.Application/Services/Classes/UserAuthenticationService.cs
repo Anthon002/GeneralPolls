@@ -28,11 +28,24 @@ namespace GeneralPolls.Application.Services.Classes
             {
                 return (null);
             }
-            var user = new ApplicationUser() { UserName = newUser.FirstName, NormalizedUserName = newUser.FirstName };
-            await _userManager.CreateAsync(user, newUser.Password);
-            await _signInManager.SignInAsync(user, isPersistent: false);
+            var user = new ApplicationUser() { UserName = newUser.Email, Email = newUser.Email, NormalizedEmail = newUser.Email.ToUpper(), FirstName = newUser.FirstName,LastName = newUser.LastName};
+            var response = await _userManager.CreateAsync(user, newUser.Password);
+            if (response.Succeeded)
+            {
+                await _signInManager.SignInAsync(user, isPersistent: false);
+            }
             return (null);
 
+        }
+        public async Task<LoginViewModel> Login(LoginViewModel user)
+        {
+            var registeredUser = await _userManager.FindByNameAsync(user.Username);
+            if (registeredUser == null ){ return (null);}
+            var response = _userManager.CheckPasswordAsync(registeredUser, user.Password);
+            if (response != null) { return (null);  } 
+
+            await _signInManager.SignInAsync(registeredUser, isPersistent: true);
+            return (user);
         }
 
     }

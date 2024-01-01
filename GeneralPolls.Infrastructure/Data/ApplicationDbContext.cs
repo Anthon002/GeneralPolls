@@ -9,8 +9,9 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace GeneralPolls.Infrastructure.Data
 {
-    public class ApplicationDbContext: DbContext
+    public class ApplicationDbContext: IdentityDbContext<ApplicationUser>
     {
+        public DbSet<PollsDBModel> PollsDB { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):
             base(options)
         {

@@ -10,5 +10,6 @@ namespace GeneralPolls.Application.Services.Interfaces
     public interface IUserAuthenticationService
     {
         Task<RegistrationViewModel> Register(RegistrationViewModel newUser);
+        Task<LoginViewModel> Login(LoginViewModel user);
     }
 }

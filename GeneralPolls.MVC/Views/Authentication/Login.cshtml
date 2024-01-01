@@ -1,0 +1,11 @@
+﻿@model GeneralPolls.Core.DTOs.LoginViewModel
+
+<form asp-controller ="Authentication" asp-action="Login" method="post">
+    <label for="email"> Email </label>
+    <input asp-for="Username" type="email" id="email"/>
+
+    <label for="password"> Password </label>
+    <input asp-for="Password" type="password" id="password"/>
+
+    <input type="submit" value="Sign In"/>
+</form>

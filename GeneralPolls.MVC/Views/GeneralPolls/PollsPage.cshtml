@@ -1,0 +1,14 @@
+﻿@model List<GeneralPolls.Core.DTOs.PollsViewModel>;
+
+<p>List of Currently Running Elections:</p>
+@{
+    foreach(var i in Model)
+    {
+        
+        <p> @i.ElectionName </p>
+    }
+}
+
+<button>
+    <a asp-action="CreatePoll" asp-controller="GeneralPolls">Create New Poll</a>
+</button>
