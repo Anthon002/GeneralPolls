@@ -24,12 +24,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/HP/Documents/asp.NET/GeneralPolls/GeneralPolls.MVC/Views/GeneralPolls/AddCandidates.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFBvbGxzXEFkZENhbmRpZGF0ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/HP/Documents/asp.NET/GeneralPolls/GeneralPolls.MVC/Views/GeneralPolls/CreatePoll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFBvbGxzXENyZWF0ZVBvbGwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/HP/Documents/asp.NET/GeneralPolls/GeneralPolls.MVC/Views/GeneralPolls/PollsPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFBvbGxzXFBvbGxzUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Documents/asp.NET/GeneralPolls/GeneralPolls.MVC/Views/GeneralPolls/ViewPoll.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFBvbGxzXFZpZXdQb2xsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/HP/Documents/asp.NET/GeneralPolls/GeneralPolls.MVC/Views/Home/Index.cshtml]

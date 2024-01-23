@@ -28,7 +28,7 @@ namespace GeneralPolls.Application.Services.Classes
             {
                 return (null);
             }
-            var user = new ApplicationUser() { UserName = newUser.Email, Email = newUser.Email, NormalizedEmail = newUser.Email.ToUpper(), FirstName = newUser.FirstName,LastName = newUser.LastName};
+            var user = new ApplicationUser() { Id = Guid.NewGuid().ToString(), UserName = newUser.Email, Email = newUser.Email, NormalizedEmail = newUser.Email.ToUpper(), FirstName = newUser.FirstName,LastName = newUser.LastName};
             var response = await _userManager.CreateAsync(user, newUser.Password);
             if (response.Succeeded)
             {
@@ -47,6 +47,10 @@ namespace GeneralPolls.Application.Services.Classes
             await _signInManager.SignInAsync(registeredUser, isPersistent: true);
             return (user);
         }
-
+        public async Task<IEnumerable<CandidateViewModel>> GetUsers(string ElectionId)
+        {
+            var listofusers = _userManager.Users.Select(x => new CandidateViewModel() { CandidateName = x.FirstName, Email = x.Email, Id = x.Id, ElectionId = ElectionId, VoteCount = 0}).ToList();
+            return (listofusers);
+        }
     }
 }

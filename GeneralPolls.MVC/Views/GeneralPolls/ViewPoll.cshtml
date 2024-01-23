@@ -1,0 +1,11 @@
+﻿@model IEnumerable<GeneralPolls.Core.DTOs.CandidateViewModel>
+<a asp-route-id="@ViewData["PollsId"]" asp-action="AddCandidates" asp-controller="GeneralPolls">
+    Add Candidate
+</a>
+
+@{
+    foreach(var candidate in Model)
+    {
+        <p>@candidate.CandidateName</p>
+    }
+}

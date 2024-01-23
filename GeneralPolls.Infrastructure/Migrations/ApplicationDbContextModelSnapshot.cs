@@ -96,6 +96,31 @@ namespace GeneralPolls.Infrastructure.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("GeneralPolls.Core.Models.CandidateDBModel", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CandidateName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ElectionId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("VoteCount")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CandidateTable");
+                });
+
             modelBuilder.Entity("GeneralPolls.Core.Models.PollsDBModel", b =>
                 {
                     b.Property<string>("Id")
@@ -110,7 +135,7 @@ namespace GeneralPolls.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PollsDB");
+                    b.ToTable("PollsTable");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

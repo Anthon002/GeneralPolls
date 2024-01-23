@@ -1,4 +1,5 @@
 ﻿using GeneralPolls.Core.DTOs;
+using GeneralPolls.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,7 @@ namespace GeneralPolls.Application.IRepositories
     {
         Task<List<PollsViewModel>> ViewPolls();
         Task<PollsViewModel> CreateNewPoll( PollsViewModel newPoll);
+        Task<CandidateViewModel> AddCandidate( CandidateDBModel newCandidate );
+        Task<IEnumerable<CandidateViewModel>> ViewRegisteredCandidates(string ElectionId);
     }
 }

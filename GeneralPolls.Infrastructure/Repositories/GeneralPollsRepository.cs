@@ -20,7 +20,7 @@ namespace GeneralPolls.Infrastructure.Repositories
         }
         public async Task<List<PollsViewModel>> ViewPolls()
         {
-            var polls = _dbContext.PollsDB.Select(x => new PollsViewModel { ElectionName = x.ElectionName, CandidateCount = x.CandidateCount, Id = x.Id }).ToList();
+            var polls = _dbContext.PollsTable.Select(x => new PollsViewModel { ElectionName = x.ElectionName, CandidateCount = x.CandidateCount, Id = x.Id }).ToList();
             return (polls);
         }
 
@@ -32,9 +32,21 @@ namespace GeneralPolls.Infrastructure.Repositories
                 ElectionName = newPoll.ElectionName,
                 CandidateCount = newPoll.CandidateCount,
             };
-            _dbContext.PollsDB.Add(createdPoll);
+            _dbContext.PollsTable.Add(createdPoll);
             _dbContext.SaveChanges();
             return (newPoll);
+        }
+
+        public async Task<CandidateViewModel> AddCandidate(CandidateDBModel newCandidate)
+        {
+            _dbContext.CandidateTable.Add(newCandidate);
+            _dbContext.SaveChanges();
+            return (null);
+        }
+        public async Task<IEnumerable<CandidateViewModel>> ViewRegisteredCandidates(string ElectionId)
+        {
+            var registeredCandidates = _dbContext.CandidateTable.Select(x => new CandidateViewModel { ElectionId = x.ElectionId, CandidateName = x.CandidateName, Email = x.Email, Id = x.Id, VoteCount = x.VoteCount}).Where(x => x.ElectionId == ElectionId).ToList();
+            return (registeredCandidates);
         }
     }
 }

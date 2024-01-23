@@ -5,7 +5,7 @@
     foreach(var i in Model)
     {
         
-        <p> @i.ElectionName </p>
+        <a asp-route-id="@i.Id" asp-action="ViewPoll" asp-controller="GeneralPolls"> @i.ElectionName </a>
     }
 }
 

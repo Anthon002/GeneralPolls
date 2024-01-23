@@ -7,9 +7,11 @@ namespace GeneralPolls.MVC.Controllers
     public class GeneralPollsController : Controller
     {
         private readonly IGeneralPolls _generalPolls;
-        public GeneralPollsController(IGeneralPolls generalPolls)
+        private readonly IUserAuthenticationService _userAuthenticationService;
+        public GeneralPollsController(IGeneralPolls generalPolls, IUserAuthenticationService userauthenticationService)
         {
             _generalPolls = generalPolls;
+            _userAuthenticationService = userauthenticationService;
         }
 
         [HttpGet]
@@ -40,21 +42,31 @@ namespace GeneralPolls.MVC.Controllers
                 return View(null);
             }
             Task<PollsViewModel> poll = _generalPolls.CreateNewPoll(newPoll);
-            return View(newPoll);
+            return RedirectToAction(nameof(PollsPage));
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<CandidateViewModel>>> ViewPoll(string Id)
+        {
+            ViewData["PollsId"] = Id;
+            var registeredVoters = _generalPolls.ViewRegisteredCandidates(Id).Result.ToList();
+            return View(registeredVoters);
         }
         [HttpGet]
-        public ActionResult AddCandidates()
+        public async Task<ActionResult<CandidateViewModel>> AddCandidates(string Id)
         {
+            var a = _userAuthenticationService.GetUsers(Id).Result.ToList();
+            ViewData["listofusers"] = a;
+            ViewData["ElectionId"] = Id;
             return View();
         }
         [HttpPost]
-        public async Task<ActionResult<CandidateViewModel>> AddCandidate( CandidateViewModel newCandidate)
+        public async Task<ActionResult<CandidateViewModel>> StoreCandidate( CandidateViewModel newCandidate)
         {
-            if (newCandidate == null)
-            {
-                return View(null); };)
-            await _generalPolls.AddCandidate(newCandidate); //Next task: Service and Repository for Adding a Candidate PS: Admin would be the one to fill out the form to register a candidate
-            return View();
+            if (newCandidate == null) {return View(null); }
+            if (newCandidate.Id == null) { return (null); };
+            await _generalPolls.AddCandidate(newCandidate);
+            return RedirectToAction(nameof(ViewPoll));
         }
     }
 }

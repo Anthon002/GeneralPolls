@@ -42,7 +42,6 @@ namespace GeneralPolls.MVC.Controllers
                 if (user == null) { return View(ViewData["nullUser"]); }
                 if (user.Username == null) { return View(ViewData["nullEmail"]); }
                 if (user.Password == null) { return View(ViewData["nullPassword"]); }
-
                 return View(await _userauthentication.Login(user));
         }
     }

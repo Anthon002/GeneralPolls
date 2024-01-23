@@ -11,7 +11,8 @@ namespace GeneralPolls.Infrastructure.Data
 {
     public class ApplicationDbContext: IdentityDbContext<ApplicationUser>
     {
-        public DbSet<PollsDBModel> PollsDB { get; set; }
+        public DbSet<PollsDBModel> PollsTable { get; set; }
+        public DbSet<CandidateDBModel> CandidateTable { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):
             base(options)
         {

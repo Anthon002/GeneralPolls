@@ -12,5 +12,7 @@ namespace GeneralPolls.Application.Services.Interfaces
     {
         Task<List<PollsViewModel>> ViewPolls();
         Task<PollsViewModel> CreateNewPoll(PollsViewModel newPoll);
+        Task<CandidateViewModel> AddCandidate(CandidateViewModel newCandidate);
+        Task<IEnumerable<CandidateViewModel>> ViewRegisteredCandidates(string ElectionId);
     }
 }

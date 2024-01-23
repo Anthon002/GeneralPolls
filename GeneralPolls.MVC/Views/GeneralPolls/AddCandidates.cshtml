@@ -1,0 +1,21 @@
+﻿@model GeneralPolls.Core.DTOs.CandidateViewModel;
+
+@{
+    var electionId = ViewData["ElectionId"];
+}
+<form asp-action="StoreCandidate" asp-controller="GeneralPolls" method="post">
+    <label for="candidatename"> Candidate's Name</label>
+    <Select asp-for="Id" id="candidatename">
+        @{
+            var listofusers = ViewData["listofusers"] as List<GeneralPolls.Core.DTOs.CandidateViewModel>;
+            foreach (var i in listofusers)
+            {
+                <option value="@i.Id">
+                    @i.CandidateName
+                </option>
+            }
+        }
+    </Select>
+    <input asp-for="ElectionId" value="@electionId" type="hidden"/>
+    <input type="submit" value="Add"/>
+</form>
