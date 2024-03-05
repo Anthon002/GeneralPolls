@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using GeneralPolls.Core.DTOs;
 using GeneralPolls.Application.Services.Interfaces;
+using GeneralPolls.Application.Services.Classes;
 
 namespace GeneralPolls.MVC.Controllers
 {
@@ -39,10 +40,16 @@ namespace GeneralPolls.MVC.Controllers
                 ViewData["nullUser"] = "You need to fill the fields to continue";
                 ViewData["nullEmail"] = "You need to put in your Email";
                 ViewData["nullPassword"] = "You need to put in your Password";
-                if (user == null) { return View(ViewData["nullUser"]); }
+                if (user == null) { return View(ViewData["nullUser"]);}
                 if (user.Username == null) { return View(ViewData["nullEmail"]); }
-                if (user.Password == null) { return View(ViewData["nullPassword"]); }
+                if (user.Password == null) { return View(ViewData["nullPassword"]);}
                 return View(await _userauthentication.Login(user));
+        }
+        [HttpGet]
+        public async Task<ActionResult<string>> Logout()
+        {
+            await _userauthentication.Logout();
+            return RedirectToAction("PollsPage", "GeneralPolls");
         }
     }
 }

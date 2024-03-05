@@ -1,11 +1,35 @@
 ﻿@model IEnumerable<GeneralPolls.Core.DTOs.CandidateViewModel>
+@using GeneralPolls.Core.DTOs;
 <a asp-route-id="@ViewData["PollsId"]" asp-action="AddCandidates" asp-controller="GeneralPolls">
     Add Candidate
 </a>
 
+<a asp-route-id="@ViewData["PollsId"]" asp-action="VoterRegisteration" asp-controller="GeneralPolls">
+    Poll Registration
+</a>
+@*<form asp-action="RegisterVoter" asp-controller="GeneralPolls">
+    <input type="hidden" value="@ViewData["PollsID"]" name="PollsID" id="PollsID" />
+    <input type="hidden" value="@ViewData["CurrentVoterID"]" name="CurrentVoterID" id="CurrentVoterID" />
+    <input type="submit" value="Register to Vote" />
+</form>*@
+
+
 @{
-    foreach(var candidate in Model)
+    if (@ViewData["ShowVotes"] == "True")
     {
-        <p>@candidate.CandidateName</p>
+        foreach (var candidate in Model)
+        {
+            <a asp-action="Vote" asp-controller="GeneralPolls" asp-route-id="@candidate.Id">@candidate.CandidateName</a> <span>..... @candidate.VoteCount</span>
+        }
     }
+    else
+    {
+        foreach (var candidate in Model)
+        {
+            <a asp-action="Vote" asp-controller="GeneralPolls" asp-route-id="@candidate.Id">@candidate.CandidateName</a>
+        }
+    }
+
+
+
 }

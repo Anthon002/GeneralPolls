@@ -56,5 +56,31 @@ namespace GeneralPolls.Application.Services.Classes
             var registeredCandidates = _generalpollsrepository.ViewRegisteredCandidates(ElectionId);
             return (registeredCandidates);
         }
+
+        public async Task<RegisteredVotersViewModel> RegisterVoter(string PollsId, string CurrentVoterID)
+        {
+            var newVoter = await _userManager.FindByIdAsync(CurrentVoterID);
+            if (newVoter == null ){ return (null); }
+            RegisteredVotersDBModel voterObj = new RegisteredVotersDBModel()
+            {
+                Id = Guid.NewGuid().ToString(),
+                ElectionId = PollsId,
+                UserId = newVoter.Id,
+                Vote = 1
+            };
+          
+            _generalpollsrepository.RegisterVoter(voterObj);
+            return (null);
+        }
+        public async Task<CandidateViewModel> GetCandidate(string Id)
+        {
+            CandidateViewModel candidate = await _generalpollsrepository.GetCandidate(Id);
+            return (candidate);
+        }
+        public async Task<CandidateViewModel> TransferVote(RegisteredVotersViewModel voter, string Id)
+        {
+            _generalpollsrepository.TransferVote(voter.Id, Id);
+            return (null);
+        }
     }
 }

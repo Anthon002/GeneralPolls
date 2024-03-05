@@ -1,5 +1,8 @@
 ﻿@model List<GeneralPolls.Core.DTOs.PollsViewModel>;
-
+@ViewData["Username"]
+<a asp-action="Logout" asp-controller="Authentication">
+    Logout
+ </a>
 <p>List of Currently Running Elections:</p>
 @{
     foreach(var i in Model)

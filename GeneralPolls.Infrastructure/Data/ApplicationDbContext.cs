@@ -13,6 +13,7 @@ namespace GeneralPolls.Infrastructure.Data
     {
         public DbSet<PollsDBModel> PollsTable { get; set; }
         public DbSet<CandidateDBModel> CandidateTable { get; set; }
+        public DbSet<RegisteredVotersDBModel> RegisteredVotersTable { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):
             base(options)
         {

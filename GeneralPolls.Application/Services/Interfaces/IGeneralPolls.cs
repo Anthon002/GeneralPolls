@@ -14,5 +14,8 @@ namespace GeneralPolls.Application.Services.Interfaces
         Task<PollsViewModel> CreateNewPoll(PollsViewModel newPoll);
         Task<CandidateViewModel> AddCandidate(CandidateViewModel newCandidate);
         Task<IEnumerable<CandidateViewModel>> ViewRegisteredCandidates(string ElectionId);
+        Task<RegisteredVotersViewModel> RegisterVoter(string PollsId, string CurrentVoterID);
+        Task<CandidateViewModel> GetCandidate(string Id);
+        Task<CandidateViewModel> TransferVote(RegisteredVotersViewModel voter, string Id);
     }
 }

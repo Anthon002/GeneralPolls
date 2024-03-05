@@ -13,6 +13,7 @@ namespace GeneralPolls.Application.Services.Interfaces
         Task<RegistrationViewModel> Register(RegistrationViewModel newUser);
         Task<LoginViewModel> Login(LoginViewModel user);
         Task<IEnumerable<CandidateViewModel>> GetUsers(string Id);
-
+        Task<RegisteredVotersViewModel> GetRegisteredVoter(string ElectionId);
+        Task<String> Logout();
     }
 }

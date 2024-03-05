@@ -18,6 +18,7 @@ namespace GeneralPolls.MVC.Controllers
         public async Task<ActionResult<List<PollsViewModel>>> PollsPage()
         {
             var polls = await _generalPolls.ViewPolls();
+            ViewData["Username"] = User.Identity.Name;
             return View(polls);
         }
         [HttpGet]
@@ -49,8 +50,18 @@ namespace GeneralPolls.MVC.Controllers
         public async Task<ActionResult<IEnumerable<CandidateViewModel>>> ViewPoll(string Id)
         {
             ViewData["PollsId"] = Id;
-            var registeredVoters = _generalPolls.ViewRegisteredCandidates(Id).Result.ToList();
-            return View(registeredVoters);
+            var voter = await _userAuthenticationService.GetRegisteredVoter(Id);
+            //ViewData["CurrentVoterID"] = voter;
+            var registeredCandidate = _generalPolls.ViewRegisteredCandidates(Id).Result.ToList();
+            if (voter.Vote == 0)
+            {
+                ViewData["ShowVotes"] = "True";
+            }
+            else
+            {
+                ViewData["ShowVotes"] = "False";
+            }
+            return View(registeredCandidate);
         }
         [HttpGet]
         public async Task<ActionResult<CandidateViewModel>> AddCandidates(string Id)
@@ -63,10 +74,51 @@ namespace GeneralPolls.MVC.Controllers
         [HttpPost]
         public async Task<ActionResult<CandidateViewModel>> StoreCandidate( CandidateViewModel newCandidate)
         {
-            if (newCandidate == null) {return View(null); }
+            if (newCandidate == null) {return (null); }
             if (newCandidate.Id == null) { return (null); };
             await _generalPolls.AddCandidate(newCandidate);
             return RedirectToAction(nameof(ViewPoll));
+        }
+
+
+        [HttpGet]
+        public async Task<ActionResult<string>> VoterRegisteration(string Id)
+        {
+            TempData["PollsId"] = Id;
+            RegisteredVotersViewModel voter = await _userAuthenticationService.GetRegisteredVoter(Id); // currently logged on voter
+            TempData["VoterID"] = voter.Id;
+            return RedirectToAction("RegisterVoter", "GeneralPolls");
+        }
+        [HttpGet]
+        public async Task<ActionResult<string>> RegisterVoter()
+        {
+            string PollsId = TempData["PollsId"].ToString();
+            string CurrentVoterID = TempData["VoterID"].ToString();
+            if (PollsId == null || CurrentVoterID == null) { return (null); }
+            await _generalPolls.RegisterVoter(PollsId, CurrentVoterID);
+            return (null);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<RegisteredVotersViewModel>> Vote(string Id)
+        {
+            if(Id == null)
+            {
+                return (null);
+            }
+            CandidateViewModel candidate = await _generalPolls.GetCandidate(Id);
+            ViewData["CandidateName"] = candidate.CandidateName;
+            TempData["CandidateId"] = candidate.Id;
+            RegisteredVotersViewModel voter = await _userAuthenticationService.GetRegisteredVoter(candidate.ElectionId); //Remove from authentication service and put in General Polls class
+            return View(voter);
+        }
+        [HttpPost]
+        public async Task<ActionResult<RegisteredVotersViewModel>> Vote(RegisteredVotersViewModel voter)
+        {
+            if (voter == null) { return (null); } // return message that reads
+            string candidateId = TempData["CandidateId"].ToString();
+            await _generalPolls.TransferVote(voter, candidateId);
+            return RedirectToAction("PollsPage");
         }
     }
 }
