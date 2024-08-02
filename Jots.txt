@@ -14,3 +14,8 @@ Problems Faced and Personal Fixes Used
 			}				
 			);
 		Note: Dont forget b => b.MigrationsAssembly("<project with dbcontext>")
+
+2)Unable to create an object of type 'ApplicationDbContext'. For the different patterns supported at design time, see https://go.microsoft.com/fwlink/?linkid=851728
+	solution:
+		redirect to infrastructure project
+		dotnet ef migrations add initialMigration --startup-project ../GeneralPolls.MVC/GeneralPolls.MVC.csproj <path to startup project>

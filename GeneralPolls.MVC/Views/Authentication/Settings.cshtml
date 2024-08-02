@@ -1,0 +1,9 @@
+﻿@model GeneralPolls.Core.Models.ApplicationUser
+
+
+<form asp-controller="Authentication" asp-action="Settings" method="post" enctype="multipart/form-data">
+    <input asp-for="Id" type="hidden" value="@ViewData["UserID"]" />
+    <label for="picture"> Import Picture </label>
+    <input asp-for="ProfilePicture" type="file" id="picture"/>
+    <input type="submit" value="Submit"/>
+</form>

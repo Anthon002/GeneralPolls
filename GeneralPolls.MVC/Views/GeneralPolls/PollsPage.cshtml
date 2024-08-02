@@ -1,17 +1,51 @@
 ﻿@model List<GeneralPolls.Core.DTOs.PollsViewModel>;
-@ViewData["Username"]
-<a asp-action="Logout" asp-controller="Authentication">
-    Logout
- </a>
-<p>List of Currently Running Elections:</p>
+
+
+
+    <nav class="side-navbar">
+      <div class="side-navbar-inner">
+        <!-- Sidebar Header    -->
+        <div class="sidebar-header d-flex align-items-center justify-content-center p-3 mb-3">
+          <!-- User Info-->
+          <div class="sidenav-header-inner text-center"><img class="img-fluid rounded-circle avatar mb-3" src="~/@ViewData["Image_Path"]" alt="person">
+            <h2 class="h5 text-white text-uppercase mb-0">@ViewData["Username"]</h2>
+            <p class="text-sm mb-0 text-muted">Web Developer</p>
+          </div>
+          <!-- Small Brand information, appears on minimized sidebar--><a class="brand-small text-center" href="index.html">
+            <p class="h1 m-0">GP</p></a>
+        </div>
+        <!-- Sidebar Navigation Menus--><span class="text-uppercase text-gray-500 text-sm fw-bold letter-spacing-0 mx-lg-2 heading">
+            <button>
+                <a asp-action="CreatePoll" asp-controller="GeneralPolls">Create New Poll</a>
+            </button>
+        </span>
+        <ul class="list-unstyled">
+      </div>
+    </nav>
+      <header id="headerContainer" class="header mb-5 pb-3">
+        <nav id="headerNavContainer" class="nav navbar fixed-top">
+          <div id="innerHeaderDiv" class="container-fluid">
+            <div class="d-flex align-items-center justify-content-between w-100">
+              <div class="d-flex align-items-center"><a class="menu-btn d-flex align-items-center justify-content-center p-2 bg-gray-900" id="toggle-btn" href="#">
+                   <svg class="svg-icon svg-icon-sm svg-icon-heavy text-white">
+                    <use xlink:href="#menu-1"> </use>
+                  </svg></a><a class="navbar-brand ms-2" href="index.html">
+                  <div id="GeneralPollsDIV" class="brand-text  d-md-inline-block text-uppercase letter-spacing-0"><span class="text-white fw-normal">General </span><strong class="text-primary ">Polls</strong></div></a></div>
+                <li class="nav-item"><a class="nav-link text-white text-sm ps-0" asp-action="Logout" asp-controller="Authentication"> <span class="d-none d-sm-inline-block">Logout</span>
+                    <svg class="svg-icon svg-icon-xs svg-icon-heavy">
+                      <use xlink:href="#security-1"> </use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+<div id="ElectionDiv">
 @{
     foreach(var i in Model)
     {
-        
-        <a asp-route-id="@i.Id" asp-action="ViewPoll" asp-controller="GeneralPolls"> @i.ElectionName </a>
+        <a asp-route-id="@i.Id" asp-action="ViewPoll" asp-controller="GeneralPolls"> <span id="ElectionSection"> @i.ElectionName</span> </a>
+     
     }
 }
-
-<button>
-    <a asp-action="CreatePoll" asp-controller="GeneralPolls">Create New Poll</a>
-</button>
+</div>

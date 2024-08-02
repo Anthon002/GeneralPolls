@@ -15,6 +15,10 @@ namespace GeneralPolls.MVC.Controllers
 
         public IActionResult Index()
         {
+            if (User.Identity.IsAuthenticated) 
+            {
+                return RedirectToAction("PollsPage","GeneralPolls");
+            }
             return View();
         }
 

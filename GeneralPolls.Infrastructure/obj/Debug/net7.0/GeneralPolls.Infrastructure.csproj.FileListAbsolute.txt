@@ -17,3 +17,42 @@ C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug
 C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.pdb
 C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.genruntimeconfig.cache
 C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\ref\GeneralPolls.Infrastructure.dll
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\bin\Debug\net7.0\GeneralPolls.Infrastructure.deps.json
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\bin\Debug\net7.0\GeneralPolls.Infrastructure.runtimeconfig.json
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\bin\Debug\net7.0\GeneralPolls.Infrastructure.dll
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\bin\Debug\net7.0\GeneralPolls.Infrastructure.pdb
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\bin\Debug\net7.0\GeneralPolls.Application.dll
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\bin\Debug\net7.0\GeneralPolls.Core.dll
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\bin\Debug\net7.0\GeneralPolls.Application.pdb
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\bin\Debug\net7.0\GeneralPolls.Core.pdb
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.csproj.AssemblyReference.cache
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.AssemblyInfoInputs.cache
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.AssemblyInfo.cs
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.csproj.CoreCompileInputs.cache
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.csproj.CopyComplete
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.dll
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\refint\GeneralPolls.Infrastructure.dll
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.pdb
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.genruntimeconfig.cache
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\ref\GeneralPolls.Infrastructure.dll
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\bin\Debug\net7.0\GeneralPolls.Infrastructure.deps.json
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\bin\Debug\net7.0\GeneralPolls.Infrastructure.runtimeconfig.json
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\bin\Debug\net7.0\GeneralPolls.Infrastructure.dll
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\bin\Debug\net7.0\GeneralPolls.Infrastructure.pdb
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\bin\Debug\net7.0\GeneralPolls.Application.dll
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\bin\Debug\net7.0\GeneralPolls.Core.dll
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\bin\Debug\net7.0\GeneralPolls.Application.pdb
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\bin\Debug\net7.0\GeneralPolls.Core.pdb
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.AssemblyInfo.cs
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.sourcelink.json
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralP.6D290C66.Up2Date
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.dll
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\refint\GeneralPolls.Infrastructure.dll
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.pdb
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\GeneralPolls.Infrastructure.genruntimeconfig.cache
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Infrastructure\obj\Debug\net7.0\ref\GeneralPolls.Infrastructure.dll

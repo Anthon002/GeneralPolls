@@ -2,7 +2,33 @@
 An Application for creating polls for elections
 
 Packages Used:
+EntityFramework: ORM and identity
+Brevo/SendingBlue: Email
 
+Tables:
+    CandiateTable:
+        string Id
+        string ElectionId
+        int VoteCount
+        string CandidateName
+        string Email
+        string CandidatePicturePath
+    PollsTable:
+        string Id
+        string ElectionName
+        int CanidateCount
+    RegisteredVotersTable:
+        string Id
+        string ElectionId
+        string UserId
+        int Vote
+    ApplicationUser:
+        inherits from idenitityUser
+        string FirstName
+        string LastName
+        string Email
+        string File_Location (location of profile picture)
+        IFormFile ProfilePicture
 
 Features Added:
 Registration and Sign in using Identity
@@ -26,5 +52,21 @@ Added VotersRegistration: Method to register a user as a voter under a dynamic p
 Added Vote: Method to enable voters to deduct their vote token and add the vote token to the selected candidate
 
 Things to do:
-- Catch the exception that arises when an unregisterd voter tries to vote
-- Give roles and restric certain methods to the Admins
+- Catch the exception that arises when an unregisterd voter tries to vote. done
+- Give roles and restric certain methods to the Admins. done
+
+Friday 2 August 2024
+Added Email Confirmation
+    ActionResult ConfirmEmail()
+    ActionResult ConfirmationComplete
+    bool EmailConfirmationStatus(): Application and Repository
+    bool SendConfirmationLink(): Application Layer
+Added IsAuthenticated
+Added UserProfilePicture
+    ActionResult Settings() Post/Get
+    settings page for users to change profile picture
+Added FrontEnd Design Using Bootstrap Admin from boostrapious
+Modified ViewPolls
+    added CandidatePicturePath
+    represented the list of candidate in a table 
+

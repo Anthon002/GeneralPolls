@@ -1,0 +1,20 @@
+﻿@model GeneralPolls.Core.DTOs.RegistrationViewModel;
+
+<form method="post" asp-controller="Authentication" asp-action="AdminRegister">
+    <label for="firstname">First Name </label>
+    <input asp-for="FirstName" type="text" id="firstname" />
+
+    <label for="lastname"> Last Name </label>
+    <input asp-for="LastName" type="text" id="lastname" />
+
+    <label for="email">Email</label>
+    <input asp-for="Email" type="email" id="email" />
+
+    <label for="password"> Password </label>
+    <input asp-for="Password" type="password" id="password" />
+
+    <label for="confirmpassword"> Confirm Password </label>
+    <input asp-for="ConfirmPassword" type="password" id="confirmpassword" />
+
+    <input type="submit" value="SignUp" />
+</form>

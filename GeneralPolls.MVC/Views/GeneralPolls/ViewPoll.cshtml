@@ -1,35 +1,81 @@
 ﻿@model IEnumerable<GeneralPolls.Core.DTOs.CandidateViewModel>
 @using GeneralPolls.Core.DTOs;
-<a asp-route-id="@ViewData["PollsId"]" asp-action="AddCandidates" asp-controller="GeneralPolls">
-    Add Candidate
-</a>
 
-<a asp-route-id="@ViewData["PollsId"]" asp-action="VoterRegisteration" asp-controller="GeneralPolls">
-    Poll Registration
-</a>
-@*<form asp-action="RegisterVoter" asp-controller="GeneralPolls">
-    <input type="hidden" value="@ViewData["PollsID"]" name="PollsID" id="PollsID" />
-    <input type="hidden" value="@ViewData["CurrentVoterID"]" name="CurrentVoterID" id="CurrentVoterID" />
-    <input type="submit" value="Register to Vote" />
-</form>*@
+<nav id="AddCandidatePollRegistration">
+        <span id="AddCandidate">
+            @{
+                if (ViewData["ShowAddCandidate"] == "True")
+                {
+                    <a asp-route-id="@ViewData["PollsId"]" asp-action="AddCandidates" asp-controller="GeneralPolls">
+                        Add Candidate
+                    </a>
+                }
+            }
 
-
+        </span>
+        <span id="PollRegistration">
+            <a asp-route-id="@ViewData["PollsId"]" asp-action="VoterRegisteration" asp-controller="GeneralPolls">
+                Poll Registration
+            </a>
+        </span>
+</nav>
+<div id="candidateTableDiv">
+<table id="candidateTable">
+                <thead>
+                    <tr>
+                        <th>Picture</th>
+                        <th>Name</th>
+                        <th>Vote</th>
+                        <th>Vote Count</th>
+                    </tr>
+                </thead>
 @{
     if (@ViewData["ShowVotes"] == "True")
     {
-        foreach (var candidate in Model)
+        <tbody>
+        @foreach (var candidate in Model)
         {
-            <a asp-action="Vote" asp-controller="GeneralPolls" asp-route-id="@candidate.Id">@candidate.CandidateName</a> <span>..... @candidate.VoteCount</span>
+                <tr>
+                    <td>
+                        <img style="width: 50px;" src="~/@candidate.CandidatePicturePath"> 
+                    </td>
+                    <td>
+                        <span>@candidate.CandidateName</span>
+                    </td>
+                    <td>
+                        <a asp-action="Vote" asp-controller="GeneralPolls" asp-route-id="@candidate.Id">Vote</a>
+                    </td>
+                    <td>
+                        @candidate.VoteCount
+                    </td>
+                </tr>
         }
+        </tbody>
     }
     else
     {
-        foreach (var candidate in Model)
-        {
-            <a asp-action="Vote" asp-controller="GeneralPolls" asp-route-id="@candidate.Id">@candidate.CandidateName</a>
-        }
+
+        <tbody>
+            @foreach (var candidate in Model)
+            {
+                <tr>
+                    <td>
+                        <img style="width: 50px;" src="~/@candidate.CandidatePicturePath"> 
+                    </td>
+                    <td>
+                        <span>@candidate.CandidateName</span>
+                    </td>
+                    <td>
+                        <a asp-action="Vote" asp-controller="GeneralPolls" asp-route-id="@candidate.Id">Vote</a>
+                    </td>
+                    <td>
+                        Vote to show
+                    </td>
+                </tr>
+            }
+        </tbody>
     }
-
-
-
 }
+</table>
+</div>
+@ViewData["Unregistered"]

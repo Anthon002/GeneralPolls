@@ -13,5 +13,6 @@ namespace GeneralPolls.Core.Models
         public int VoteCount { get; set; }
         public string CandidateName { get; set; }
         public string Email { get; set; }
+        public string CandidatePicturePath {get; set;} = "";
     }
 }

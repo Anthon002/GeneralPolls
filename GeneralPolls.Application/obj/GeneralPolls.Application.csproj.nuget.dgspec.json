@@ -1,35 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.Application\\GeneralPolls.Application.csproj": {}
+    "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.Application\\GeneralPolls.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.Application\\GeneralPolls.Application.csproj": {
+    "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.Application\\GeneralPolls.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.Application\\GeneralPolls.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.Application\\GeneralPolls.Application.csproj",
         "projectName": "GeneralPolls.Application",
-        "projectPath": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.Application\\GeneralPolls.Application.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.Application\\obj\\",
+        "projectPath": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.Application\\GeneralPolls.Application.csproj",
+        "packagesPath": "C:\\Users\\Chinedu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Chinedu\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.Core\\GeneralPolls.Core.csproj": {
-                "projectPath": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.Core\\GeneralPolls.Core.csproj"
+              "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.Core\\GeneralPolls.Core.csproj": {
+                "projectPath": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.Core\\GeneralPolls.Core.csproj"
               }
             }
           }
@@ -38,12 +36,21 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -83,6 +90,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.14, )"
+            },
+            "SendGrid": {
+              "target": "Package",
+              "version": "[9.29.3, )"
+            },
+            "sib_api_v3_sdk": {
+              "target": "Package",
+              "version": "[4.0.2, )"
             }
           },
           "imports": [
@@ -101,28 +116,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.Core\\GeneralPolls.Core.csproj": {
+    "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.Core\\GeneralPolls.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.Core\\GeneralPolls.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.Core\\GeneralPolls.Core.csproj",
         "projectName": "GeneralPolls.Core",
-        "projectPath": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.Core\\GeneralPolls.Core.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.Core\\obj\\",
+        "projectPath": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.Core\\GeneralPolls.Core.csproj",
+        "packagesPath": "C:\\Users\\Chinedu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Chinedu\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -135,12 +148,25 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Hosting": {
+              "target": "Package",
+              "version": "[2.2.7, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.14, )"
@@ -176,6 +202,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.14, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -194,7 +224,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

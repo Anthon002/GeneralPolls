@@ -1,20 +1,129 @@
 ﻿@model GeneralPolls.Core.DTOs.RegistrationViewModel;
 
-<form method="post" asp-controller="Authentication" asp-action="Register">
+@* <form method="post" asp-controller="Authentication" asp-action="Register">
     <label for="firstname">First Name </label>
-    <input asp-for="FirstName" type="text" id="firstname" />
+    <input asp-for="FirstName" type="text" id="firstname" required />
 
     <label for="lastname"> Last Name </label>
-    <input asp-for="LastName" type="text" id="lastname" />
+    <input asp-for="LastName" type="text" id="lastname" required/>
 
     <label for="email">Email</label>
-    <input asp-for="Email" type="email" id="email" />
+    <input asp-for="Email" type="email" id="email" required />
 
     <label for="password"> Password </label>
-    <input asp-for="Password" type="password" id="password" />
+    <input asp-for="Password" type="password" id="password" required/>
 
     <label for="confirmpassword"> Confirm Password </label>
-    <input asp-for="ConfirmPassword" type="password" id="confirmpassword" />
+    <input asp-for="ConfirmPassword" type="password" id="confirmpassword" required/>
+    <input asp-for="File_Location" type="hidden" value="to be changed"> 
 
     <input type="submit" value="SignUp" />
-</form>
+
+    <b>
+        @ViewData["nullUser"]
+    </b>
+</form> *@
+
+  <body>
+    <div class="login-page d-flex align-items-center bg-gray-100">
+      <div class="container mb-3">
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <div class="card">
+              <div class="card-body p-5">
+                <header class="text-center mb-5">
+                  <h1 class="text-xxl text-gray-400 text-uppercase">General<strong class="text-primary">Polls</strong></h1>
+                </header>
+                <form class="register-form" method="post" asp-controller="Authentication" asp-action="Register">
+                  <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                      <div class="input-material-group mb-3">
+                        <input class="input-material" asp-for="FirstName" type="text" id="firstname" required />
+                        <label class="label-material" for="firstname">First Name</label>
+                      </div>
+                        <div class="input-material-group mb-3">
+                            <input class="input-material" asp-for="LastName" type="text" id="lastname" required />
+                            <label class="label-material" for="firstname">Last Name</label>
+                      </div>
+                      <div class="input-material-group mb-3">
+                        <input class="input-material" asp-for="Email" type="email" id="email" required />
+                        <label class="label-material" for="email">Email</label>
+
+                        @* <input class="input-material" type="email" name="registerEmail" required data-validate-field="registerEmail">
+                        <label class="label-material">Email Address</label> *@
+                      </div>
+                      <div class="input-material-group mb-4">
+                        <input class="input-material" asp-for="Password" type="password" id="password" required/>
+                        <label class="label-material" for="password"> Password </label>
+
+                        @* <input class="input-material" type="password" name="registerPassword" required data-validate-field="registerPassword">
+                        <label class="label-material">Password</label> *@
+                      </div>
+                    <div class="input-material-group mb-4">
+                        <input class="input-material" asp-for="ConfirmPassword" type="password" id="confirmpassword" required/>
+                        <label class="label-material" for="confirmpassword"> Confirm Password </label>
+
+                        @* <input class="input-material" type="password" name="registerPassword" required data-validate-field="registerPassword">
+                        <label class="label-material">Password</label> *@
+                      </div>
+
+                        <input asp-for="File_Location" type="hidden" value="to be changed"> 
+
+                      <div class="form-check mb-4">
+                        <input class="form-check-input" id="register-agree" name="registerAgree" type="checkbox" required value="1" data-validate-field="registerAgree">
+                        <label class="form-check-label form-label" for="register-agree">I agree with the terms and policy                        </label>
+                      </div>
+                    </div>
+                    <div class="col-12 text-center">
+                      <button class="btn btn-primary mb-3" id="login" type="submit">Register</button><br><span class="text-xs text-gray-500">Already have an account?  </span><a class="text-xs text-paleBlue ms-1" asp-controller="Authentication" asp-action="Login">Login</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center position-absolute bottom-0 start-0 w-100 z-index-20">
+        <p class="text-gray-500">Design by <a class="external" href="https://bootstrapious.com/p/admin-template">Bootstrapious</a>
+          <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)                      -->
+        </p>
+      </div>
+    </div>
+    <!-- JavaScript files-->
+    @* <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/just-validate/js/just-validate.min.js"></script>
+    <script src="vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="vendor/overlayscrollbars/js/OverlayScrollbars.min.js"></script>
+    <!-- Main File-->
+    <script src="js/front.js"></script> *@
+    @* <script>
+      // ------------------------------------------------------- //
+      //   Inject SVG Sprite - 
+      //   see more here 
+      //   https://css-tricks.com/ajaxing-svg-sprite/
+      // ------------------------------------------------------ //
+      function injectSvgSprite(path) {
+      
+          var ajax = new XMLHttpRequest();
+          ajax.open("GET", path, true);
+          ajax.send();
+          ajax.onload = function(e) {
+          var div = document.createElement("div");
+          div.className = 'd-none';
+          div.innerHTML = ajax.responseText;
+          document.body.insertBefore(div, document.body.childNodes[0]);
+          }
+      }
+      // this is set to BootstrapTemple website as you cannot 
+      // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
+      // while using file:// protocol
+      // pls don't forget to change to your domain :)
+      injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
+      
+      
+    </script> *@
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </body>

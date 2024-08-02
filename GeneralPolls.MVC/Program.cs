@@ -25,12 +25,14 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
         options.Password.RequireUppercase = false;
         options.Password.RequireDigit = false;
 
-}).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+    }).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
-//builder.Services.AddScoped<DbContext, ApplicationDbContext>();
+builder.Services.AddScoped<RoleSeederService>();
 builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
 builder.Services.AddScoped<IGeneralPolls, GeneralPollsService>();
-builder.Services.AddTransient<IGeneralPollsRepository, GeneralPollsRepository>();
+builder.Services.AddScoped<IGeneralPollsRepository, GeneralPollsRepository>();
+
+
 
 var app = builder.Build();
 
@@ -48,11 +50,12 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
 app.UseAuthentication();
+app.UseAuthorization();
+
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Authentication}/{action=Login}/{id?}");
 
 app.Run();

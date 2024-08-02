@@ -21,5 +21,6 @@ namespace GeneralPolls.Core.DTOs
         [Required]
         [Compare("Password", ErrorMessage ="Confirm Password not the same as Password")]
         public string ConfirmPassword { get; set; }
+        public string File_Location { get; set; }
     }
 }

@@ -1,248 +1,616 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\GeneralPolls.MVC.bundle.scp.css",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\GeneralPolls.MVC.bundle.scp.css",
       "PackagePath": "staticwebassets\\GeneralPolls.MVC.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\custom.css",
+      "PackagePath": "staticwebassets\\css\\custom.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.blue.css",
+      "PackagePath": "staticwebassets\\css\\style.blue.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.blue.min.css",
+      "PackagePath": "staticwebassets\\css\\style.blue.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.blue.min.css.map",
+      "PackagePath": "staticwebassets\\css\\style.blue.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.default.css",
+      "PackagePath": "staticwebassets\\css\\style.default.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.default.min.css",
+      "PackagePath": "staticwebassets\\css\\style.default.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.default.min.css.map",
+      "PackagePath": "staticwebassets\\css\\style.default.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.green.css",
+      "PackagePath": "staticwebassets\\css\\style.green.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.green.min.css",
+      "PackagePath": "staticwebassets\\css\\style.green.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.green.min.css.map",
+      "PackagePath": "staticwebassets\\css\\style.green.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.pink.css",
+      "PackagePath": "staticwebassets\\css\\style.pink.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.pink.min.css",
+      "PackagePath": "staticwebassets\\css\\style.pink.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.pink.min.css.map",
+      "PackagePath": "staticwebassets\\css\\style.pink.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.red.css",
+      "PackagePath": "staticwebassets\\css\\style.red.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.red.min.css",
+      "PackagePath": "staticwebassets\\css\\style.red.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.red.min.css.map",
+      "PackagePath": "staticwebassets\\css\\style.red.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.sea.css",
+      "PackagePath": "staticwebassets\\css\\style.sea.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.sea.min.css",
+      "PackagePath": "staticwebassets\\css\\style.sea.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.sea.min.css.map",
+      "PackagePath": "staticwebassets\\css\\style.sea.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.violet.css",
+      "PackagePath": "staticwebassets\\css\\style.violet.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.violet.min.css",
+      "PackagePath": "staticwebassets\\css\\style.violet.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\css\\style.violet.min.css.map",
+      "PackagePath": "staticwebassets\\css\\style.violet.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\images\\profile_pictures\\15d98f0c8f4b4e0a8d7e05a1f2f56a1f_Screenshot (2).png",
+      "PackagePath": "staticwebassets\\images\\profile_pictures\\15d98f0c8f4b4e0a8d7e05a1f2f56a1f_Screenshot (2).png"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\images\\profile_pictures\\44fb72070a4349e2b8fd7569a98299df_python.png",
+      "PackagePath": "staticwebassets\\images\\profile_pictures\\44fb72070a4349e2b8fd7569a98299df_python.png"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\images\\profile_pictures\\67c793c43fc94761baedb2884dcd1497_face.jpg",
+      "PackagePath": "staticwebassets\\images\\profile_pictures\\67c793c43fc94761baedb2884dcd1497_face.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\images\\profile_pictures\\869da09634454bf8a31ac32c92fa4985_IMG-20240715-WA0005.jpg",
+      "PackagePath": "staticwebassets\\images\\profile_pictures\\869da09634454bf8a31ac32c92fa4985_IMG-20240715-WA0005.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\images\\profile_pictures\\9116d41f84064d51bf04a9c482fa2b6c_Screenshot (2).png",
+      "PackagePath": "staticwebassets\\images\\profile_pictures\\9116d41f84064d51bf04a9c482fa2b6c_Screenshot (2).png"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\images\\profile_pictures\\d38444b5cb2a4872a0e1c11d321d60ec_4-clipart-sun-1.png",
+      "PackagePath": "staticwebassets\\images\\profile_pictures\\d38444b5cb2a4872a0e1c11d321d60ec_4-clipart-sun-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\images\\profile_pictures\\f447918e8cec4fe0a606884ac428b639_Screenshot (2).png",
+      "PackagePath": "staticwebassets\\images\\profile_pictures\\f447918e8cec4fe0a606884ac428b639_Screenshot (2).png"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\js\\charts-custom.js",
+      "PackagePath": "staticwebassets\\js\\charts-custom.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\js\\charts-home.js",
+      "PackagePath": "staticwebassets\\js\\charts-home.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\js\\front.js",
+      "PackagePath": "staticwebassets\\js\\front.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\HP\\Documents\\asp.NET\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\vendor\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\chart.js\\Chart.bundle.js",
+      "PackagePath": "staticwebassets\\vendor\\chart.js\\Chart.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\chart.js\\Chart.bundle.min.js",
+      "PackagePath": "staticwebassets\\vendor\\chart.js\\Chart.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\chart.js\\Chart.css",
+      "PackagePath": "staticwebassets\\vendor\\chart.js\\Chart.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\chart.js\\Chart.js",
+      "PackagePath": "staticwebassets\\vendor\\chart.js\\Chart.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\chart.js\\Chart.min.css",
+      "PackagePath": "staticwebassets\\vendor\\chart.js\\Chart.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\chart.js\\Chart.min.js",
+      "PackagePath": "staticwebassets\\vendor\\chart.js\\Chart.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\choices.js\\public\\assets\\scripts\\choices.js",
+      "PackagePath": "staticwebassets\\vendor\\choices.js\\public\\assets\\scripts\\choices.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\choices.js\\public\\assets\\scripts\\choices.min.js",
+      "PackagePath": "staticwebassets\\vendor\\choices.js\\public\\assets\\scripts\\choices.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\choices.js\\public\\assets\\scripts\\choices.min.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\vendor\\choices.js\\public\\assets\\scripts\\choices.min.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\choices.js\\public\\assets\\styles\\base.css",
+      "PackagePath": "staticwebassets\\vendor\\choices.js\\public\\assets\\styles\\base.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\choices.js\\public\\assets\\styles\\base.min.css",
+      "PackagePath": "staticwebassets\\vendor\\choices.js\\public\\assets\\styles\\base.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\choices.js\\public\\assets\\styles\\choices.css",
+      "PackagePath": "staticwebassets\\vendor\\choices.js\\public\\assets\\styles\\choices.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\choices.js\\public\\assets\\styles\\choices.min.css",
+      "PackagePath": "staticwebassets\\vendor\\choices.js\\public\\assets\\styles\\choices.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\imagesloaded\\assets\\2D333F_0_0.woff",
+      "PackagePath": "staticwebassets\\vendor\\imagesloaded\\assets\\2D333F_0_0.woff"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\imagesloaded\\assets\\2D333F_0_0.woff2",
+      "PackagePath": "staticwebassets\\vendor\\imagesloaded\\assets\\2D333F_0_0.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\imagesloaded\\assets\\2D333F_1_0.woff",
+      "PackagePath": "staticwebassets\\vendor\\imagesloaded\\assets\\2D333F_1_0.woff"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\imagesloaded\\assets\\2D333F_1_0.woff2",
+      "PackagePath": "staticwebassets\\vendor\\imagesloaded\\assets\\2D333F_1_0.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\imagesloaded\\assets\\2D333F_2_0.woff",
+      "PackagePath": "staticwebassets\\vendor\\imagesloaded\\assets\\2D333F_2_0.woff"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\imagesloaded\\assets\\2D333F_2_0.woff2",
+      "PackagePath": "staticwebassets\\vendor\\imagesloaded\\assets\\2D333F_2_0.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\imagesloaded\\imagesloaded.js",
+      "PackagePath": "staticwebassets\\vendor\\imagesloaded\\imagesloaded.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\imagesloaded\\imagesloaded.pkgd.js",
+      "PackagePath": "staticwebassets\\vendor\\imagesloaded\\imagesloaded.pkgd.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\imagesloaded\\imagesloaded.pkgd.min.js",
+      "PackagePath": "staticwebassets\\vendor\\imagesloaded\\imagesloaded.pkgd.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\imagesloaded\\sandbox\\background\\css\\background.css",
+      "PackagePath": "staticwebassets\\vendor\\imagesloaded\\sandbox\\background\\css\\background.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\imagesloaded\\sandbox\\background\\index.html",
+      "PackagePath": "staticwebassets\\vendor\\imagesloaded\\sandbox\\background\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\imagesloaded\\sandbox\\progress\\index.html",
+      "PackagePath": "staticwebassets\\vendor\\imagesloaded\\sandbox\\progress\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\imagesloaded\\sandbox\\progress\\progress.js",
+      "PackagePath": "staticwebassets\\vendor\\imagesloaded\\sandbox\\progress\\progress.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\just-validate\\css\\justValidateTooltip.css",
+      "PackagePath": "staticwebassets\\vendor\\just-validate\\css\\justValidateTooltip.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\just-validate\\css\\justValidateTooltip.min.css",
+      "PackagePath": "staticwebassets\\vendor\\just-validate\\css\\justValidateTooltip.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\just-validate\\index.html",
+      "PackagePath": "staticwebassets\\vendor\\just-validate\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\just-validate\\js\\just-validate.js",
+      "PackagePath": "staticwebassets\\vendor\\just-validate\\js\\just-validate.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\just-validate\\js\\just-validate.min.js",
+      "PackagePath": "staticwebassets\\vendor\\just-validate\\js\\just-validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\just-validate\\tooltip.html",
+      "PackagePath": "staticwebassets\\vendor\\just-validate\\tooltip.html"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\overlayscrollbars\\css\\OverlayScrollbars.css",
+      "PackagePath": "staticwebassets\\vendor\\overlayscrollbars\\css\\OverlayScrollbars.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\overlayscrollbars\\css\\OverlayScrollbars.min.css",
+      "PackagePath": "staticwebassets\\vendor\\overlayscrollbars\\css\\OverlayScrollbars.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\overlayscrollbars\\js\\OverlayScrollbars.js",
+      "PackagePath": "staticwebassets\\vendor\\overlayscrollbars\\js\\OverlayScrollbars.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\overlayscrollbars\\js\\OverlayScrollbars.min.js",
+      "PackagePath": "staticwebassets\\vendor\\overlayscrollbars\\js\\OverlayScrollbars.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\overlayscrollbars\\js\\jquery.overlayScrollbars.js",
+      "PackagePath": "staticwebassets\\vendor\\overlayscrollbars\\js\\jquery.overlayScrollbars.js"
+    },
+    {
+      "Id": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\wwwroot\\vendor\\overlayscrollbars\\js\\jquery.overlayScrollbars.min.js",
+      "PackagePath": "staticwebassets\\vendor\\overlayscrollbars\\js\\jquery.overlayScrollbars.min.js"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.GeneralPolls.MVC.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -12,3 +12,32 @@ C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\re
 C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.pdb
 C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.genruntimeconfig.cache
 C:\Users\HP\Documents\asp.NET\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\ref\GeneralPolls.Core.dll
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Core\bin\Debug\net7.0\GeneralPolls.Core.deps.json
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Core\bin\Debug\net7.0\GeneralPolls.Core.runtimeconfig.json
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Core\bin\Debug\net7.0\GeneralPolls.Core.dll
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Core\bin\Debug\net7.0\GeneralPolls.Core.pdb
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.csproj.AssemblyReference.cache
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.AssemblyInfoInputs.cache
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.AssemblyInfo.cs
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.csproj.CoreCompileInputs.cache
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.dll
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\refint\GeneralPolls.Core.dll
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.pdb
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.genruntimeconfig.cache
+D:\ \Documents\asp.NET\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\ref\GeneralPolls.Core.dll
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Core\bin\Debug\net7.0\GeneralPolls.Core.deps.json
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Core\bin\Debug\net7.0\GeneralPolls.Core.runtimeconfig.json
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Core\bin\Debug\net7.0\GeneralPolls.Core.dll
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Core\bin\Debug\net7.0\GeneralPolls.Core.pdb
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.csproj.AssemblyReference.cache
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.AssemblyInfoInputs.cache
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.AssemblyInfo.cs
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.csproj.CoreCompileInputs.cache
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.sourcelink.json
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.dll
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\refint\GeneralPolls.Core.dll
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.pdb
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\GeneralPolls.Core.genruntimeconfig.cache
+C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.Core\obj\Debug\net7.0\ref\GeneralPolls.Core.dll

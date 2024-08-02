@@ -24,7 +24,7 @@ namespace GeneralPolls.Infrastructure.Repositories
             return (polls);
         }
 
-        public async Task<PollsViewModel> CreateNewPoll(PollsViewModel newPoll)
+        public string CreateNewPoll(PollsViewModel newPoll)
         {
             var createdPoll = new PollsDBModel()
             {
@@ -34,18 +34,29 @@ namespace GeneralPolls.Infrastructure.Repositories
             };
             _dbContext.PollsTable.Add(createdPoll);
             _dbContext.SaveChanges();
-            return (newPoll);
+            return (createdPoll.Id);
         }
 
-        public async Task<CandidateViewModel> AddCandidate(CandidateDBModel newCandidate)
+        public async Task<string> AddCandidate(CandidateDBModel newCandidate)
         {
-            _dbContext.CandidateTable.Add(newCandidate);
+            var existingUser = await _dbContext.CandidateTable.FirstOrDefaultAsync(x => x.Email == newCandidate.Email);
+            try{
+                if (existingUser == null)
+                {
+                    return ("This candidate already exists");
+                }
+            await _dbContext.CandidateTable.AddAsync(newCandidate);
             _dbContext.SaveChanges();
-            return (null);
+            
+            }
+            catch (Exception ex){
+                Console.WriteLine(ex.InnerException);
+            }
+            return ("success");
         }
         public async Task<IEnumerable<CandidateViewModel>> ViewRegisteredCandidates(string ElectionId)
         {
-            var registeredCandidates = _dbContext.CandidateTable.Select(x => new CandidateViewModel { ElectionId = x.ElectionId, CandidateName = x.CandidateName, Email = x.Email, Id = x.Id, VoteCount = x.VoteCount}).Where(x => x.ElectionId == ElectionId).ToList();
+            var registeredCandidates = _dbContext.CandidateTable.Select(x => new CandidateViewModel { ElectionId = x.ElectionId, CandidateName = x.CandidateName, Email = x.Email, Id = x.Id, VoteCount = x.VoteCount, CandidatePicturePath = x.CandidatePicturePath}).Where(x => x.ElectionId == ElectionId).ToList();
             return (registeredCandidates);
         }
         public async Task<RegisteredVotersViewModel> RegisterVoter(RegisteredVotersDBModel newVoter)
@@ -55,8 +66,13 @@ namespace GeneralPolls.Infrastructure.Repositories
             {
                 return (null);
             }
+            try{
             _dbContext.RegisteredVotersTable.Add(newVoter);
             _dbContext.SaveChanges();
+            }
+            catch (Exception ex){
+               Console.WriteLine(ex.Message);
+            }
             return (null);
         }
 
@@ -69,10 +85,10 @@ namespace GeneralPolls.Infrastructure.Repositories
             {
                 voter = new RegisteredVotersViewModel()
                 {
-                    Id = Id_,
+                    Id = Guid.NewGuid().ToString(),
                     ElectionId = ElectionId_,
                     Vote = -1,
-                    UserId = Guid.NewGuid().ToString(),
+                    UserId =Id_,
                 };
             }
             else
@@ -104,16 +120,16 @@ namespace GeneralPolls.Infrastructure.Repositories
             };
             return (candidateViewModel);
         }
-        public async void TransferVote(string voterId,  string candidateId)
+        public string TransferVote(string voterId,  string candidateId)
         {
-            var voter =  _dbContext.RegisteredVotersTable.FirstOrDefault(x => x.Id == voterId);
+            var voter = _dbContext.RegisteredVotersTable.FirstOrDefault(x => x.Id == voterId);
             var candidate = _dbContext.CandidateTable.FirstOrDefault(x => x.Id == candidateId);
 
             if(voter == null || candidate == null)
             {
-                return; // change the return type from void to return a code that displays a message about no voter or candidate value
+                return ("Unregistered");
             }
-            //subtract voter's vote
+
             if (voter.Vote == 1)
             {
                 voter.Vote = 0;
@@ -121,8 +137,37 @@ namespace GeneralPolls.Infrastructure.Repositories
                 _dbContext.SaveChanges();
             }
 
-            //test the voting 
+            return (null);
 
         }
+        public async Task<Boolean> UserExists(string email)
+        {
+            var user = _dbContext.Users.FirstOrDefault(x => x.Email == email);
+            if (user == null) { return false;}
+            return true;
+        }
+
+        public async Task<ApplicationUser> ChangeProfilePicture(ApplicationUser updatedUser)
+        {
+            var user = _dbContext.Users.FirstOrDefault(x => x.Id == updatedUser.Id);
+            user.ProfilePicture = updatedUser.ProfilePicture;
+            user.File_Location = updatedUser.File_Location;
+            _dbContext.SaveChanges();
+            return user;
+
+        }
+        public string GetUserImage(string UserId)
+        {
+            if (UserId == null) { return (null); }
+            ApplicationUser user = _dbContext.Users.FirstOrDefault(x => x.Id == UserId);
+            if (user == null) { return null; }
+            return user.File_Location;
+        }
+        public ApplicationUser GetUser(string userId)
+        {
+            ApplicationUser user = _dbContext.Users.FirstOrDefault(x => x.Id == userId);
+            return user;
+        }
+
     }
 }
