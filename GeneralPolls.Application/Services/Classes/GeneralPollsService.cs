@@ -15,17 +15,20 @@ namespace GeneralPolls.Application.Services.Classes
     {
         private readonly IGeneralPollsRepository _generalpollsrepository;
         private readonly UserManager<ApplicationUser> _userManager;
-        public GeneralPollsService(IGeneralPollsRepository generalPollsRepository, UserManager<ApplicationUser> userManager)
+        private readonly RoleSeederService _roleseeder;
+
+        public GeneralPollsService(IGeneralPollsRepository generalPollsRepository, UserManager<ApplicationUser> userManager, RoleSeederService roleseeder)
         {
             _generalpollsrepository = generalPollsRepository;
             _userManager = userManager;
+            _roleseeder = roleseeder;
         }
         public Task<List<PollsViewModel>> ViewPolls()
         {
             return _generalpollsrepository.ViewPolls();
         }
 
-        public Task<PollsViewModel> CreateNewPoll(PollsViewModel newPoll)
+        public string CreateNewPoll(PollsViewModel newPoll)
         {
             if (newPoll == null)
             {
@@ -34,21 +37,22 @@ namespace GeneralPolls.Application.Services.Classes
             return _generalpollsrepository.CreateNewPoll(newPoll);
         }
 
-        public async Task<CandidateViewModel> AddCandidate(CandidateViewModel newCandidate)
+        public async Task<string> AddCandidate(CandidateViewModel newCandidate)
         {
             var user = _userManager.Users.FirstOrDefault( x => x.Id == newCandidate.Id);
             if (user == null) { return (null); }
             CandidateDBModel candidate = new CandidateDBModel()
             {
-                Id = newCandidate.Id,
+                Id = Guid.NewGuid().ToString(),
                 ElectionId = newCandidate.ElectionId,
                 Email = user.Email,
                 CandidateName = user.FirstName + " " + user.LastName,
                 VoteCount = 0,
+                CandidatePicturePath = user.File_Location,
             };
-            _generalpollsrepository.AddCandidate(candidate);
+            string candidateMsg = await _generalpollsrepository.AddCandidate(candidate);
 
-            return (newCandidate);
+            return (candidateMsg);
         }
 
         public Task<IEnumerable<CandidateViewModel>> ViewRegisteredCandidates(string ElectionId)
@@ -59,13 +63,13 @@ namespace GeneralPolls.Application.Services.Classes
 
         public async Task<RegisteredVotersViewModel> RegisterVoter(string PollsId, string CurrentVoterID)
         {
-            var newVoter = await _userManager.FindByIdAsync(CurrentVoterID);
+            var newVoter = _userManager.FindByIdAsync(CurrentVoterID);
             if (newVoter == null ){ return (null); }
             RegisteredVotersDBModel voterObj = new RegisteredVotersDBModel()
             {
                 Id = Guid.NewGuid().ToString(),
                 ElectionId = PollsId,
-                UserId = newVoter.Id,
+                UserId = CurrentVoterID,
                 Vote = 1
             };
           
@@ -77,10 +81,17 @@ namespace GeneralPolls.Application.Services.Classes
             CandidateViewModel candidate = await _generalpollsrepository.GetCandidate(Id);
             return (candidate);
         }
-        public async Task<CandidateViewModel> TransferVote(RegisteredVotersViewModel voter, string Id)
+        public string TransferVote(RegisteredVotersViewModel voter, string Id)
         {
-            _generalpollsrepository.TransferVote(voter.Id, Id);
-            return (null);
+            string response = _generalpollsrepository.TransferVote(voter.Id, Id);
+            return (response);
         }
+        public async Task AssignCustomRoles(string userName, string pollId)
+        {
+            await _roleseeder.SeedCustomRoles(pollId);
+           ApplicationUser user = await _userManager.FindByNameAsync(userName);
+            await _userManager.AddToRoleAsync(user, pollId);
+        }
+
     }
 }
