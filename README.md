@@ -69,4 +69,23 @@ Added FrontEnd Design Using Bootstrap Admin from boostrapious
 Modified ViewPolls
     added CandidatePicturePath
     represented the list of candidate in a table 
+Changes Made:
+Added a "Delete Candidate" feature:
+	[HttpGet]
+	RemoveCandidate(string candidateId) 
 
+	[HttpPost]
+	DeleteCandidate(string candidateId)
+		Service Class: DeleteCandidate(string candidateId)
+			Repository Class: DeleteCandidate(string candidateId)
+Had localdb(MssqlDb) connection issues:
+	made new dbserver
+	deleted old migrations folder, made new migrations
+Fixed Duplicate candidate issues
+
+Updated the PollsDBTable:
+	Added string UserId (Id of the user that created the poll)
+	Removed string CandidateCount
+Mon 05 08 2024
+Making checks to see if current poll belongs to current user? allow delete candidate : don't allow
+Successfully implemented the "Delete candidate" feature

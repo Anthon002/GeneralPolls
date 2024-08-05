@@ -82,6 +82,7 @@ namespace GeneralPolls.MVC.Controllers
             {
                 return RedirectToAction("ConfirmEmail","Authentication");
             }
+            string UserId = User.Identity.GetUserId();
 
             ViewData["PollNull"] = "";
             ViewData["PollNameNull"] = "";
@@ -96,7 +97,7 @@ namespace GeneralPolls.MVC.Controllers
                 ViewData["PollNameNull"] = "Your Poll Does Not Have A Name";
                 return View(null);
             }
-            string response = _generalPolls.CreateNewPoll(newPoll) ;
+            string response = _generalPolls.CreateNewPoll(newPoll,UserId) ;
 
             if (response != null)
             {
@@ -123,6 +124,7 @@ namespace GeneralPolls.MVC.Controllers
             ViewData["UserAuthenticated"] = "true";
             ViewData["PollsId"] = Id;
             ViewData["ShowAddCandidate"] = "False";
+            ViewData["addCandidate"] = TempData["addCandidate"] != null ? TempData["addCandidate"] : "";
             ViewData["Unregistered"] = TempData["Unregistered"];
             ViewData["Image_Path"] = TempData["Image_Path"] as String;
             var voter = await _userAuthenticationService.GetRegisteredVoter(Id);
@@ -167,7 +169,6 @@ namespace GeneralPolls.MVC.Controllers
             ViewData["listofusers"] = a;
             ViewData["ElectionId"] = Id;
             ViewData["Image_Path"] = TempData["Image_Path"] as String;
-            ViewData["addCandidate"] = TempData != null ? TempData["addCandidate"]: "";
             return View();
         }
 
@@ -190,7 +191,7 @@ namespace GeneralPolls.MVC.Controllers
             if (message != "success")
             {
                 TempData["addCandidate"] = message;
-                return RedirectToAction("AddCandidate", new {id = newCandidate.ElectionId});
+                return RedirectToAction("ViewPoll", new {id = newCandidate.ElectionId});
             }
 
             return RedirectToAction(nameof(ViewPoll), new { id = newCandidate.ElectionId }); //Error with getting the ViewPoll PollId after Adding a candidate;
@@ -210,7 +211,7 @@ namespace GeneralPolls.MVC.Controllers
             }
 
             ViewData["UserAuthenticated"] = "true";
-            TempData["PollsId"] = Id;
+            //TempData["PollsId"] = Id;
             RegisteredVotersViewModel voter = await _userAuthenticationService.GetRegisteredVoter(Id);
             TempData["VoterID"] = voter.Id;
             ViewData["Image_Path"] = TempData["Image_Path"] as String;
@@ -286,6 +287,26 @@ namespace GeneralPolls.MVC.Controllers
                 TempData["Unregistered"] = "You are not yet registered as a voter for this election";
             }
             return RedirectToAction("ViewPoll",new { id = voter.ElectionId});
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> DeleteCandidate(string CandidateId, string PollsId)
+        {
+            List<string> returnValue = PollsId != null && CandidateId != null ? new List<string>{CandidateId, PollsId} : null;
+            if (returnValue == null){return RedirectToAction("ViewPoll",new{id = PollsId});}
+            return View(returnValue);
+        }
+        [HttpPost]
+        public async Task<ActionResult> RemoveCandidate(string CandidateId,string PollsId)
+        {
+            bool CurrentUserPoll = _generalPolls.IsPollForUser(User.Identity.GetUserId(), PollsId);
+            ViewData["CurrentUserPoll"] = TempData["CurrentUserPoll"];
+            if (CurrentUserPoll == true)
+            {
+            _generalPolls.DeleteCandidate(CandidateId);
+            return RedirectToAction("ViewPoll", new{id = PollsId});
+            }
+            return RedirectToAction("ViewPoll", new{id = PollsId});
         }
     }
 }

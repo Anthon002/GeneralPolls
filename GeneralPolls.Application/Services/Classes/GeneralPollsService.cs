@@ -28,13 +28,13 @@ namespace GeneralPolls.Application.Services.Classes
             return _generalpollsrepository.ViewPolls();
         }
 
-        public string CreateNewPoll(PollsViewModel newPoll)
+        public string CreateNewPoll(PollsViewModel newPoll,string UserId)
         {
             if (newPoll == null)
             {
                 return (null);
             }
-            return _generalpollsrepository.CreateNewPoll(newPoll);
+            return _generalpollsrepository.CreateNewPoll(newPoll, UserId);
         }
 
         public async Task<string> AddCandidate(CandidateViewModel newCandidate)
@@ -91,6 +91,17 @@ namespace GeneralPolls.Application.Services.Classes
             await _roleseeder.SeedCustomRoles(pollId);
            ApplicationUser user = await _userManager.FindByNameAsync(userName);
             await _userManager.AddToRoleAsync(user, pollId);
+        }
+        public string DeleteCandidate(string CandidateId)
+        {
+            Task<string> response = _generalpollsrepository.DeleteCandidate(CandidateId);
+            string responseString = response.Result;
+            return responseString;
+        }
+        public bool IsPollForUser(string UserId, string PollId)
+        {
+            bool response = _generalpollsrepository.isPollForUser(UserId, PollId).Result;
+            return response;
         }
 
     }

@@ -18,6 +18,9 @@
                 Poll Registration
             </a>
         </span>
+        <b>
+            @ViewData["addCandidate"]
+        </b>
 </nav>
 <div id="candidateTableDiv">
 <table id="candidateTable">
@@ -48,6 +51,16 @@
                     <td>
                         @candidate.VoteCount
                     </td>
+                     @if(ViewData["ShowAddCandidate"] == "True")
+                        {
+                        <td><a asp-action="DeleteCandidate" asp-controller="GeneralPolls" asp-route-id="@candidate.Id">Delete</a></td>
+                        <form asp-action="DeleteCandidate" asp-controller="GeneralPolls" method="get">
+                            <input type="hidden" value="@candidate.Id" name="CandidateId">
+                            <input type="hidden" value="@ViewData["PollsId"]" name="PollsId">
+                            <input type="submit" value="Delete">
+                        </form>
+                        }
+
                 </tr>
         }
         </tbody>
@@ -71,6 +84,17 @@
                     <td>
                         Vote to show
                     </td>
+                    @if(ViewData["ShowAddCandidate"] == "True")
+                    {
+                        <td><a asp-action="DeleteCandidate" asp-controller="GeneralPolls" asp-route-id="@candidate.Id">Delete</a></td>
+                        <form asp-action="DeleteCandidate" asp-controller="GeneralPolls" method="get">
+                            <input type="hidden" value="@candidate.Id" name="CandidateId">
+                            <input type="hidden" value="@ViewData["PollsId"]" name="PollsId">
+                            <input type="submit" value="Delete">
+                        </form>
+                    
+                    }
+
                 </tr>
             }
         </tbody>

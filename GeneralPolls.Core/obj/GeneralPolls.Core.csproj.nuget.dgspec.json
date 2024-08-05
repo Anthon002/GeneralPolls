@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.Core\\GeneralPolls.Core.csproj": {}
+    "C:\\Users\\Chinedu\\Documents\\Asp.Net\\ToGit\\GeneralPolls\\GeneralPolls.Core\\GeneralPolls.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.Core\\GeneralPolls.Core.csproj": {
+    "C:\\Users\\Chinedu\\Documents\\Asp.Net\\ToGit\\GeneralPolls\\GeneralPolls.Core\\GeneralPolls.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.Core\\GeneralPolls.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\ToGit\\GeneralPolls\\GeneralPolls.Core\\GeneralPolls.Core.csproj",
         "projectName": "GeneralPolls.Core",
-        "projectPath": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.Core\\GeneralPolls.Core.csproj",
+        "projectPath": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\ToGit\\GeneralPolls\\GeneralPolls.Core\\GeneralPolls.Core.csproj",
         "packagesPath": "C:\\Users\\Chinedu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.Core\\obj\\",
+        "outputPath": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\ToGit\\GeneralPolls\\GeneralPolls.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Chinedu\\AppData\\Roaming\\NuGet\\NuGet.Config"

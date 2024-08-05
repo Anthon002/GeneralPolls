@@ -8956,11 +8956,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\GeneralPolls.MVC.csproj",
+      "projectUniqueName": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\ToGit\\GeneralPolls\\GeneralPolls.MVC\\GeneralPolls.MVC.csproj",
       "projectName": "GeneralPolls.MVC",
-      "projectPath": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\GeneralPolls.MVC.csproj",
+      "projectPath": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\ToGit\\GeneralPolls\\GeneralPolls.MVC\\GeneralPolls.MVC.csproj",
       "packagesPath": "C:\\Users\\Chinedu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.MVC\\obj\\",
+      "outputPath": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\ToGit\\GeneralPolls\\GeneralPolls.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Chinedu\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -8975,8 +8975,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.Infrastructure\\GeneralPolls.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\GeneralPolls\\GeneralPolls.Infrastructure\\GeneralPolls.Infrastructure.csproj"
+            "C:\\Users\\Chinedu\\Documents\\Asp.Net\\ToGit\\GeneralPolls\\GeneralPolls.Infrastructure\\GeneralPolls.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Chinedu\\Documents\\Asp.Net\\ToGit\\GeneralPolls\\GeneralPolls.Infrastructure\\GeneralPolls.Infrastructure.csproj"
             }
           }
         }

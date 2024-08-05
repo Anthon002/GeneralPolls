@@ -1,0 +1,15 @@
+@model List<string>;
+
+
+<b> Are You Sure You Want To Delete Remove This Candidate?</b>
+@* <a asp-action="RemoveCandidate" asp-controller="GeneralPolls" asp-route-id = "@ViewData["CandidateId"]" >
+    <button> Yes </button>
+</a> *@
+<form asp-action="RemoveCandidate" asp-controller="GeneralPolls" method="post">
+    <input type="hidden" value="@Model[0]" name="CandidateId">
+    <input type="hidden" value="@Model[1]" name="PollsId">
+    <input type="submit" value="Yes">
+</form>
+<a asp-action="ViewPoll" asp-controller="GeneralPolls" asp-route-id= "@ViewData["PollsId"]">
+    <button>No</button>
+</a>

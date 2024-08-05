@@ -9,87 +9,91 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GeneralPolls.MVC
 build_property.RootNamespace = GeneralPolls.MVC
-build_property.ProjectDir = C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.MVC\
+build_property.ProjectDir = C:\Users\Chinedu\Documents\Asp.Net\ToGit\GeneralPolls\GeneralPolls.MVC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Chinedu\Documents\Asp.Net\GeneralPolls\GeneralPolls.MVC
+build_property.MSBuildProjectDirectory = C:\Users\Chinedu\Documents\Asp.Net\ToGit\GeneralPolls\GeneralPolls.MVC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/Authentication/AdminRegister.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/Authentication/AdminRegister.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cQWRtaW5SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/Authentication/ConfirmationComplete.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/Authentication/ConfirmationComplete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cQ29uZmlybWF0aW9uQ29tcGxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/Authentication/ConfirmEmail.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/Authentication/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cQ29uZmlybUVtYWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/Authentication/Login.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/Authentication/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/Authentication/Register.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/Authentication/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/Authentication/Settings.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/Authentication/Settings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cU2V0dGluZ3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/GeneralPolls/AddCandidates.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/GeneralPolls/AddCandidates.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFBvbGxzXEFkZENhbmRpZGF0ZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/GeneralPolls/CreatePoll.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/GeneralPolls/CreatePoll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFBvbGxzXENyZWF0ZVBvbGwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/GeneralPolls/PollsPage.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/GeneralPolls/DeleteCandidate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFBvbGxzXERlbGV0ZUNhbmRpZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/GeneralPolls/PollsPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFBvbGxzXFBvbGxzUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/GeneralPolls/ViewPoll.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/GeneralPolls/ViewPoll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFBvbGxzXFZpZXdQb2xsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/GeneralPolls/Vote.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/GeneralPolls/Vote.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFBvbGxzXFZvdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/GeneralPolls/VoterRegisteration.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/GeneralPolls/VoterRegisteration.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VuZXJhbFBvbGxzXFZvdGVyUmVnaXN0ZXJhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/Home/Index.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/Home/Privacy.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/Shared/Error.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/_ViewImports.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/_ViewStart.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Chinedu/Documents/Asp.Net/GeneralPolls/GeneralPolls.MVC/Views/Shared/_Layout.cshtml]
+[C:/Users/Chinedu/Documents/Asp.Net/ToGit/GeneralPolls/GeneralPolls.MVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-76vg89a9ew

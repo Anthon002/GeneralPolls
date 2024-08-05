@@ -20,17 +20,17 @@ namespace GeneralPolls.Infrastructure.Repositories
         }
         public async Task<List<PollsViewModel>> ViewPolls()
         {
-            var polls = _dbContext.PollsTable.Select(x => new PollsViewModel { ElectionName = x.ElectionName, CandidateCount = x.CandidateCount, Id = x.Id }).ToList();
+            var polls = _dbContext.PollsTable.Select(x => new PollsViewModel { ElectionName = x.ElectionName, UserId = x.UserId, Id = x.Id }).ToList();
             return (polls);
         }
 
-        public string CreateNewPoll(PollsViewModel newPoll)
+        public string CreateNewPoll(PollsViewModel newPoll, string UserId)
         {
             var createdPoll = new PollsDBModel()
             {
                 Id = Guid.NewGuid().ToString(),
                 ElectionName = newPoll.ElectionName,
-                CandidateCount = newPoll.CandidateCount,
+                UserId = UserId,
             };
             _dbContext.PollsTable.Add(createdPoll);
             _dbContext.SaveChanges();
@@ -39,9 +39,11 @@ namespace GeneralPolls.Infrastructure.Repositories
 
         public async Task<string> AddCandidate(CandidateDBModel newCandidate)
         {
-            var existingUser = await _dbContext.CandidateTable.FirstOrDefaultAsync(x => x.Email == newCandidate.Email);
+            int existingUsers = _dbContext.CandidateTable.Where(x => x.Email == newCandidate.Email).Where(x => x.ElectionId == newCandidate.ElectionId).Count();
+          //  var UserExists = existingUsers.FirstOrDefault(x => x.ElectionId == newCandidate.ElectionId);
+
             try{
-                if (existingUser == null)
+                if (existingUsers != 0)
                 {
                     return ("This candidate already exists");
                 }
@@ -169,5 +171,21 @@ namespace GeneralPolls.Infrastructure.Repositories
             return user;
         }
 
+        public async Task<string> DeleteCandidate(string CandidateId)
+        {
+            if (CandidateId == null){return ("Null Candidate Id");}
+            var candidate = await _dbContext.CandidateTable.FirstOrDefaultAsync(x => x.Id == CandidateId);
+            if (candidate == null){return ("Null Candidate");}
+            var response = _dbContext.CandidateTable.Remove(candidate);
+            _dbContext.SaveChanges();
+            return ("Candidate Removed Successfully");
+        }
+        public async Task<bool> isPollForUser(string UserId, string PollId)
+        {
+            var poll = await _dbContext.PollsTable.FirstOrDefaultAsync(x => x.Id == PollId);
+            if (poll == null){ return false; }
+            if (poll.UserId != UserId){return false;}
+            return true;
+        }
     }
 }

@@ -13,6 +13,6 @@ namespace GeneralPolls.Core.DTOs
         public string Id { get; set; }
         [Required]
         public string ElectionName { get; set; }
-        public int CandidateCount { get; set; } = 0; //How many candidates are participating in an election
+        public string UserId{get; set;}
     }
 }
