@@ -308,5 +308,10 @@ namespace GeneralPolls.MVC.Controllers
             }
             return RedirectToAction("ViewPoll", new{id = PollsId});
         }
+        [HttpGet]
+        public async Task<ActionResult> UpdatesToCome()
+        {
+            return View();
+        }
     }
 }

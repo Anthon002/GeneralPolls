@@ -1,0 +1,20 @@
+<a id="backToConfirmEmail" asp-action="ConfirmEmail" asp-controller="Authentication"><button>Resend Confirmation</button></a>
+<div id="msgDIV"> </div>
+
+<script>
+console.log("page loaded")
+var btn = document.getElementById("backToConfirmEmail");
+var msgDIV = document.getElementById("msgDIV");
+let timer;
+let counter = 30;
+btn.style.display = "none";
+timer = setInterval(()=>{
+ counter--;
+ msgDIV.innerHTML = "Resend confirmation link in "+ counter +" sec"
+ if (counter <= 0){
+     counter = 0;
+     btn.style.display = "block";
+     clearInterval(timer);
+ }
+},1000)
+</script>

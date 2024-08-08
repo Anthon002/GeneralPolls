@@ -1,8 +1,7 @@
-<h1>@ViewData["Title"]</h1>
-
-<div>
+<h1>@ViewData["Title"]</h1><div>
     <form asp-controller="Authentication" asp-action="ConfirmEmail" method="post">
         <input type="hidden" value="true" >
-        <input type="submit" value="Send Confirmation Link" id="confimationLinkBtn">
+        <input type="submit" value="Send Confirmation Link">
+        <div id="msgDIV"></div>
     </form>
 </div>

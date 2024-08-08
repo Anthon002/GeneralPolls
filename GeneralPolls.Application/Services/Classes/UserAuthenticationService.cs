@@ -119,7 +119,7 @@ namespace GeneralPolls.Application.Services.Classes
         }
         public async Task<bool> SendConfirmationLink(string emailContent, ApplicationUser user)
         {
-            //Configuration.Default.ApiKey["api-key"] = "API KEY";
+            Configuration.Default.ApiKey["api-key"] = "api key";
 
             var apiInstance = new TransactionalEmailsApi();
             string SenderName = "Chinedu Anulugwo";

@@ -165,6 +165,11 @@ namespace GeneralPolls.MVC.Controllers
             // string emailContent = $"Please Confirm your email by clicking this link <a href='{callBackUrl}'>Click Here</a>";
             string emailContent = $"{request.Scheme}://{request.Host}{callBackUrl}";
             await _userauthentication.SendConfirmationLink(emailContent,user);
+            return RedirectToAction("WaitForResend");
+        }
+        [HttpGet]
+        public async Task<ActionResult> WaitForResend()
+        {
             return View();
         }
         [HttpGet]

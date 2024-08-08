@@ -89,3 +89,9 @@ Updated the PollsDBTable:
 Mon 05 08 2024
 Making checks to see if current poll belongs to current user? allow delete candidate : don't allow
 Successfully implemented the "Delete candidate" feature
+
+Thursday 8 august
+Updated Confirmation:
+	Added a "WaitForResend" page that counts down for 30 secs before allowing user to resend confirmation link
+Added a "UpdatesToCome" page containing a list of updates to be added to the project as it has been deployed "http://generalpoll.somee.com"
+Published a deployed a first draft to "somee.com"

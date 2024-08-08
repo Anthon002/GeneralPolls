@@ -1,6 +1,8 @@
 ﻿@model IEnumerable<GeneralPolls.Core.DTOs.CandidateViewModel>
 @using GeneralPolls.Core.DTOs;
-
+<marquee>
+    Try logging out then logging back in to see the option for adding candidates 
+</marquee>
 <nav id="AddCandidatePollRegistration">
         <span id="AddCandidate">
             @{
@@ -16,6 +18,11 @@
         <span id="PollRegistration">
             <a asp-route-id="@ViewData["PollsId"]" asp-action="VoterRegisteration" asp-controller="GeneralPolls">
                 Poll Registration
+            </a>
+        </span>
+        <span id="PollsPageLink">
+            <a asp-action="PollsPage" asp-controller="GeneralPolls">
+                Polls Page
             </a>
         </span>
         <b>
@@ -53,12 +60,13 @@
                     </td>
                      @if(ViewData["ShowAddCandidate"] == "True")
                         {
-                        <td><a asp-action="DeleteCandidate" asp-controller="GeneralPolls" asp-route-id="@candidate.Id">Delete</a></td>
+                    <td>
                         <form asp-action="DeleteCandidate" asp-controller="GeneralPolls" method="get">
                             <input type="hidden" value="@candidate.Id" name="CandidateId">
                             <input type="hidden" value="@ViewData["PollsId"]" name="PollsId">
                             <input type="submit" value="Delete">
                         </form>
+                    </td>
                         }
 
                 </tr>
@@ -86,11 +94,12 @@
                     </td>
                     @if(ViewData["ShowAddCandidate"] == "True")
                     {
-                        <td><a asp-action="DeleteCandidate" asp-controller="GeneralPolls" asp-route-id="@candidate.Id">Delete</a></td>
                         <form asp-action="DeleteCandidate" asp-controller="GeneralPolls" method="get">
+                            <td>
                             <input type="hidden" value="@candidate.Id" name="CandidateId">
                             <input type="hidden" value="@ViewData["PollsId"]" name="PollsId">
                             <input type="submit" value="Delete">
+                            </td>
                         </form>
                     
                     }
