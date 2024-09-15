@@ -370,3 +370,6 @@ C:\Users\admin\Documents\Projects\Dotnet\GeneralPolls\GeneralPolls\GeneralPolls.
 C:\Users\admin\Documents\Projects\Dotnet\GeneralPolls\GeneralPolls\GeneralPolls.MVC\obj\Debug\net7.0\GeneralPolls.MVC.pdb
 C:\Users\admin\Documents\Projects\Dotnet\GeneralPolls\GeneralPolls\GeneralPolls.MVC\obj\Debug\net7.0\GeneralPolls.MVC.genruntimeconfig.cache
 C:\Users\admin\Documents\Projects\Dotnet\GeneralPolls\GeneralPolls\GeneralPolls.MVC\obj\Debug\net7.0\ref\GeneralPolls.MVC.dll
+C:\Users\admin\Documents\Projects\Dotnet\GeneralPolls\GeneralPolls\GeneralPolls.MVC\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\admin\Documents\Projects\Dotnet\GeneralPolls\GeneralPolls\GeneralPolls.MVC\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\admin\Documents\Projects\Dotnet\GeneralPolls\GeneralPolls\GeneralPolls.MVC\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll

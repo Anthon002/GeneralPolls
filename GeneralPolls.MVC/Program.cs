@@ -7,6 +7,7 @@ using GeneralPolls.Application.Services.Classes;
 using GeneralPolls.Application.IRepositories;
 using GeneralPolls.Infrastructure.Repositories;
 using Hangfire;
+using GeneralPolls.Core.OptionsSetup;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,6 +38,7 @@ builder.Services.AddHangfire((sp,config)=>{
     config.UseSqlServerStorage(connectionString);
 });
 builder.Services.AddHangfireServer();
+builder.Services.ConfigureOptions<ConfigurationOptionsSetup>();
 
 
 

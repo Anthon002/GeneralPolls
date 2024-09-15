@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using GeneralPolls.Core.DTOs;
 using GeneralPolls.Application.Services.Interfaces;
-using GeneralPolls.Application.Services.Classes;
 using GeneralPolls.Core.Models;
 using Microsoft.AspNetCore.Identity;
 
@@ -23,8 +22,7 @@ namespace GeneralPolls.MVC.Controllers
         }
         [HttpGet]
         public ActionResult<RegistrationViewModel> Register()
-        {
-            
+        {   
             return View();
         }
 

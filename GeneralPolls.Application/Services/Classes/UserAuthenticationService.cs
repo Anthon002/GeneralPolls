@@ -8,9 +8,11 @@ using GeneralPolls.Application.IRepositories;
 using GeneralPolls.Application.Services.Interfaces;
 using GeneralPolls.Core.DTOs;
 using GeneralPolls.Core.Models;
+using GeneralPolls.Core.Options;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Options;
 using sib_api_v3_sdk.Api;   // Brevo Email for sending mails using apikeys
 using sib_api_v3_sdk.Client;    // Brevo Email for sending mails using apikeys
 using sib_api_v3_sdk.Model; // Brevo Email for sending mails using apikeys
@@ -25,8 +27,9 @@ namespace GeneralPolls.Application.Services.Classes
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IHttpContextAccessor _contextAccessor;
         private readonly IGeneralPollsRepository _generalPollsRepository;
+        private readonly IOptions<ApiKeysOptions> _options;
 
-        public UserAuthenticationService(RoleManager<IdentityRole> roleManager, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IHttpContextAccessor contextAccessor, IGeneralPollsRepository generalPollsRepository, RoleSeederService roleSeeder)
+        public UserAuthenticationService(RoleManager<IdentityRole> roleManager, UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IHttpContextAccessor contextAccessor, IGeneralPollsRepository generalPollsRepository, RoleSeederService roleSeeder, IOptions<ApiKeysOptions> option)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -34,6 +37,7 @@ namespace GeneralPolls.Application.Services.Classes
             _generalPollsRepository = generalPollsRepository;
             _roleSeeder = roleSeeder;
             _roleManager = roleManager;
+            _options = option;
         }
 
         public async Task<string> Register(RegistrationViewModel newUser)
@@ -119,7 +123,7 @@ namespace GeneralPolls.Application.Services.Classes
         }
         public async Task<bool> SendConfirmationLink(string emailContent, ApplicationUser user)
         {
-            Configuration.Default.ApiKey["api-key"] = "_";
+            Configuration.Default.ApiKey["api-key"] = _options.Value.BrevoApiKey;
 
             var apiInstance = new TransactionalEmailsApi();
             string SenderName = "Chinedu Anulugwo";

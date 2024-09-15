@@ -8,6 +8,8 @@ using sib_api_v3_sdk.Api;
 using sib_api_v3_sdk.Client;  
 using sib_api_v3_sdk.Model;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Options;
+using GeneralPolls.Core.Options;
 
 namespace GeneralPolls.Application.Services.Classes
 {
@@ -16,12 +18,14 @@ namespace GeneralPolls.Application.Services.Classes
         private readonly IGeneralPollsRepository _generalpollsrepository;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleSeederService _roleseeder;
+        private readonly IOptions<ApiKeysOptions> _options;
 
-        public GeneralPollsService(IGeneralPollsRepository generalPollsRepository, UserManager<ApplicationUser> userManager, RoleSeederService roleseeder)
+        public GeneralPollsService(IGeneralPollsRepository generalPollsRepository, UserManager<ApplicationUser> userManager, RoleSeederService roleseeder, IOptions<ApiKeysOptions> options)
         {
             _generalpollsrepository = generalPollsRepository;
             _userManager = userManager;
             _roleseeder = roleseeder;
+            _options = options;
         }
         public Task<List<PollsViewModel>> ViewPolls()
         {
@@ -62,7 +66,7 @@ namespace GeneralPolls.Application.Services.Classes
             List<string> registeredUsersEmail = await _generalpollsrepository.GetRegisteredVotersEmail(completedPoll.Id);
             foreach (var user in registeredUsersEmail)
             {
-            Configuration.Default.ApiKey["api-key"] = "_";
+            Configuration.Default.ApiKey["api-key"] = _options.Value.BrevoApiKey;
 
             var apiInstance = new TransactionalEmailsApi();
             string SenderName = "Chinedu Anulugwo";
