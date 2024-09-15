@@ -6,6 +6,7 @@ using GeneralPolls.Application.Services.Interfaces;
 using GeneralPolls.Application.Services.Classes;
 using GeneralPolls.Application.IRepositories;
 using GeneralPolls.Infrastructure.Repositories;
+using Hangfire;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +16,7 @@ builder.Services.AddControllersWithViews();
 //add database through the applicationdbcontext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("GeneralPolls.Infrastructure"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("OnlineConnection"), b => b.MigrationsAssembly("GeneralPolls.Infrastructure"));
 });
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
@@ -31,6 +32,11 @@ builder.Services.AddScoped<RoleSeederService>();
 builder.Services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();
 builder.Services.AddScoped<IGeneralPolls, GeneralPollsService>();
 builder.Services.AddScoped<IGeneralPollsRepository, GeneralPollsRepository>();
+builder.Services.AddHangfire((sp,config)=>{
+    var connectionString = sp.GetRequiredService<IConfiguration>().GetConnectionString("OnlineConnection");
+    config.UseSqlServerStorage(connectionString);
+});
+builder.Services.AddHangfireServer();
 
 
 
@@ -52,6 +58,7 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseHangfireDashboard();
 
 
 app.MapControllerRoute(

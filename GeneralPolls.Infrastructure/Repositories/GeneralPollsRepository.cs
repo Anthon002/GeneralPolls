@@ -1,7 +1,9 @@
 ﻿using GeneralPolls.Application.IRepositories;
 using GeneralPolls.Core.DTOs;
+using GeneralPolls.Core.Model;
 using GeneralPolls.Core.Models;
 using GeneralPolls.Infrastructure.Data;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,9 +16,11 @@ namespace GeneralPolls.Infrastructure.Repositories
     public class GeneralPollsRepository: IGeneralPollsRepository
     {
         private readonly ApplicationDbContext _dbContext;
-        public GeneralPollsRepository(ApplicationDbContext dbContext)
+        private readonly UserManager<ApplicationUser> _userManager;
+        public GeneralPollsRepository(ApplicationDbContext dbContext, UserManager<ApplicationUser> userManager)
         {
             _dbContext = dbContext;
+            _userManager = userManager;
         }
         public async Task<List<PollsViewModel>> ViewPolls()
         {
@@ -24,17 +28,23 @@ namespace GeneralPolls.Infrastructure.Repositories
             return (polls);
         }
 
-        public string CreateNewPoll(PollsViewModel newPoll, string UserId)
+        public async Task<string> CreateNewPoll(PollsViewModel newPoll, string UserId)
         {
             var createdPoll = new PollsDBModel()
             {
-                Id = Guid.NewGuid().ToString(),
+                Id = newPoll.Id,
                 ElectionName = newPoll.ElectionName,
                 UserId = UserId,
+                DateCreated = DateTime.UtcNow,
+                EndDate = DateTime.Parse( newPoll.EndDate.ToString()).ToUniversalTime(),
             };
             _dbContext.PollsTable.Add(createdPoll);
-            _dbContext.SaveChanges();
-            return (createdPoll.Id);
+            var response = await _dbContext.SaveChangesAsync();
+            if (response >= 1)
+            {
+                return "true";
+            }
+            return (response.ToString());
         }
 
         public async Task<string> AddCandidate(CandidateDBModel newCandidate)
@@ -63,7 +73,7 @@ namespace GeneralPolls.Infrastructure.Repositories
         }
         public async Task<RegisteredVotersViewModel> RegisterVoter(RegisteredVotersDBModel newVoter)
         {
-            var alreadyRegistered = _dbContext.RegisteredVotersTable.ToList().Where(x => x.UserId == newVoter.UserId & x.ElectionId == newVoter.ElectionId); // This cross references the new voter's UserId and Election to know if this user has previously registerd for this same election/poll
+            var alreadyRegistered = _dbContext.RegisteredVotersTable.ToList().Where(x => x.VoterId == newVoter.VoterId & x.ElectionId == newVoter.ElectionId); // This cross references the new voter's UserId and Election to know if this user has previously registerd for this same election/poll
             if (alreadyRegistered.Count() >= 1)
             {
                 return (null);
@@ -74,6 +84,7 @@ namespace GeneralPolls.Infrastructure.Repositories
             }
             catch (Exception ex){
                Console.WriteLine(ex.Message);
+               Console.WriteLine(ex.InnerException);
             }
             return (null);
         }
@@ -81,7 +92,9 @@ namespace GeneralPolls.Infrastructure.Repositories
         public async Task<RegisteredVotersViewModel> GetRegisteredVoter(string ElectionId_, string Id_)
         {
             var voter = new RegisteredVotersViewModel();
-            var voterDB = _dbContext.RegisteredVotersTable.FirstOrDefault(x => x.UserId == Id_ && x.ElectionId == ElectionId_);
+            ApplicationUser user = await _userManager.FindByIdAsync(Id_);
+            string _voterEmail = user.Email;
+            var voterDB = _dbContext.RegisteredVotersTable.FirstOrDefault(x => x.VoterId == Id_ && x.ElectionId == ElectionId_);
 
             if (voterDB == null)
             {
@@ -91,6 +104,7 @@ namespace GeneralPolls.Infrastructure.Repositories
                     ElectionId = ElectionId_,
                     Vote = -1,
                     UserId =Id_,
+                    VoterEmail = _voterEmail
                 };
             }
             else
@@ -100,7 +114,7 @@ namespace GeneralPolls.Infrastructure.Repositories
                 {
                     Id = voterDB.Id,
                     ElectionId = voterDB.ElectionId,
-                    UserId = voterDB.UserId,
+                    UserId = voterDB.VoterId,
                     Vote = voterDB.Vote,
                 };
             }
@@ -187,5 +201,105 @@ namespace GeneralPolls.Infrastructure.Repositories
             if (poll.UserId != UserId){return false;}
             return true;
         }
+
+        public async Task<string> TransferToCompletedPoll(PollsViewModel completedPoll)
+        {
+            try {
+           PollsDBModel poll = await _dbContext.PollsTable.FirstOrDefaultAsync(x => x.Id == completedPoll.Id);
+           if (poll == null){ return null; }
+           CompletedPolls completed_poll = new CompletedPolls ()
+           {
+            Id = poll.Id,
+            ElectionName = poll.ElectionName,
+            UserId = poll.UserId,
+            DateCreated = poll.DateCreated,
+            EndDate = poll.EndDate,
+           };
+           await _dbContext.CompletedPollsTable.AddAsync(completed_poll);
+            _dbContext.PollsTable.Remove(poll);
+            var response = await _dbContext.SaveChangesAsync();
+            if (response >= 1)
+            {
+                return "true";
+            }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.InnerException);
+            }
+            return null;
+        }
+
+        public async Task<List<string>> GetRegisteredVotersEmail(string PollsId)
+        {
+            List<string> email = _dbContext.RegisteredVotersTable.Where(x => x.ElectionId == PollsId).Select(x => x.VoterEmail).ToList();
+            return email;
+        }
+        public async Task<List<CompletedPollsViewModel>> GetCompletedPolls()
+        {
+            List<CompletedPollsViewModel> completedPolls = await (
+                from polls in _dbContext.CompletedPollsTable
+                select new CompletedPollsViewModel{
+                    Id = polls.Id,
+                    ElectionName = polls.ElectionName,
+                    UserId = _dbContext.Users.FirstOrDefault(x => x.Id == polls.UserId).UserName,
+                    DateCreated = polls.DateCreated,
+                    EndDate = polls.EndDate,
+                }
+            ).ToListAsync();
+            return completedPolls;
+        }
+        public async Task<PollsViewModel> GetPoll(string Id)
+        {
+            PollsViewModel pollVM= await (
+            from polls in _dbContext.PollsTable
+            where polls.Id == Id
+            select new PollsViewModel{
+                Id = polls.Id,
+                ElectionName = polls.ElectionName,
+                UserId = polls.UserId,
+                DateCreated = polls.DateCreated,
+                EndDate = polls.EndDate
+            }
+            ).FirstOrDefaultAsync();
+            if (pollVM == null){return null;}
+            return pollVM;
+
+        }
+        public async Task<List<CandidateViewModel>> GetCandidateResultList(string CompletedPollId)
+        {
+            List<CandidateViewModel> candidateList = await (
+                from candidate in _dbContext.CandidateTable
+                orderby candidate.VoteCount descending
+                where candidate.ElectionId == CompletedPollId
+                select new CandidateViewModel{
+                    Id = candidate.Id,
+                    ElectionId = candidate.ElectionId,
+                    VoteCount = candidate.VoteCount,
+                    CandidateName = candidate.CandidateName,
+                    Email = candidate.Email,
+                    CandidatePicturePath = candidate.CandidatePicturePath
+                }
+            ).ToListAsync();
+            return candidateList;
+        }
+        public async Task<CompletedPollsViewModel> GetCompletedPoll(string Id)
+        {
+            CompletedPollsViewModel completedPoll = await(
+                from poll in _dbContext.CompletedPollsTable
+                where poll.Id == Id
+                select new CompletedPollsViewModel
+                {
+                    Id = poll.Id,
+                    ElectionName = poll.ElectionName,
+                    UserId = poll.UserId,
+                    DateCreated = poll.DateCreated,
+                    EndDate = poll.EndDate,
+                }
+            ).FirstAsync();
+            return completedPoll;
+        }
+        
     }
 }

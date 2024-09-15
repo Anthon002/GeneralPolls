@@ -1,0 +1,36 @@
+<table id="CompletedElections">
+    <thead>
+        <tr>
+            <th> Id </th>
+            <th> ElectionName </th>
+            <th> UserId </th>
+            <th> DateCreated </th>
+            <th> EndDate </th>
+        </tr>
+    </thead>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+        var baseurl = window.location.origin
+        var xmlhttp = XMLHttpRequest()
+        xmlhttp.open("GET",baseurl + "/GeneralPolls/CompletedElectionsList", true)
+        xmlhttp.onreadystatechange = function(){
+            if (xmlhttp.status == 200 and xmlhttp.readyState == 4){
+                var _data = JSON.parse(xmlhttp.responseText)
+                console.log(_data)
+                $("CompletedElections").DataTables({
+                    data:_data,
+                    column:[
+                    {"data":"electionname"},
+                    {"data":"userid"},
+                    {"data":"datecreated"},
+                    {"data":"enddate"}
+                    ]
+                })
+            }
+        }
+        xmlhttp.send();
+    })
+</script>

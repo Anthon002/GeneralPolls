@@ -12,5 +12,6 @@ namespace GeneralPolls.Core.DTOs
         public string ElectionId { get; set; }
         public string UserId { get; set; }
         public int Vote { get; set; } = 1;
+        public string VoterEmail{get; set;}
     }
 }

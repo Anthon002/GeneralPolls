@@ -10,8 +10,9 @@ namespace GeneralPolls.Core.Models
     {
         public string Id { get; set; }
         public string ElectionId { get; set; }
-        public string UserId { get; set; }
+        public string VoterId { get; set; }
         public int Vote { get; set; } = 1;
+        public string VoterEmail {get; set;}
 
         /*
          * Voting Operation:

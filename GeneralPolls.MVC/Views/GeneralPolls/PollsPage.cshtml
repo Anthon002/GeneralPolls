@@ -39,6 +39,7 @@
         </nav>
       </header>
       <div id="UpdatesToCome"><li> <a asp-action="UpdatesToCome" asp-controller="GeneralPolls" > Updates To Come</a></li> </div>
+      <div>@ViewData["ErrorMessage"]</div>
 <div id="ElectionDiv">
 @{
     foreach(var i in Model)

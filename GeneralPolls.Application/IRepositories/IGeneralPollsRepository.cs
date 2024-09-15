@@ -11,7 +11,7 @@ namespace GeneralPolls.Application.IRepositories
     public interface IGeneralPollsRepository
     {
         Task<List<PollsViewModel>> ViewPolls();
-        string CreateNewPoll( PollsViewModel newPoll, string UserId);
+        Task<string> CreateNewPoll( PollsViewModel newPoll, string UserId);
         Task<string> AddCandidate( CandidateDBModel newCandidate );
         Task<IEnumerable<CandidateViewModel>> ViewRegisteredCandidates(string ElectionId);
         Task<RegisteredVotersViewModel> RegisterVoter(RegisteredVotersDBModel newVoter);
@@ -25,6 +25,12 @@ namespace GeneralPolls.Application.IRepositories
         // Task<bool> EmailConfirmationTrue();
         Task<string> DeleteCandidate(string CandidateId);
         Task<bool> isPollForUser(string UserId, string PollId);
+        Task<string> TransferToCompletedPoll(PollsViewModel completedPoll);
+        Task<List<string>> GetRegisteredVotersEmail(string PollsId);
+        Task<List<CompletedPollsViewModel>> GetCompletedPolls();
+        Task<PollsViewModel> GetPoll(string Id);
+        Task<List<CandidateViewModel>> GetCandidateResultList(string CompletedPollId);
+        Task<CompletedPollsViewModel> GetCompletedPoll(string Id);
         
     }
 }

@@ -1,0 +1,27 @@
+@model List<GeneralPolls.Core.DTOs.CandidateViewModel>
+    <div> <a asp-action="PollsPage" asp-controller="GeneralPolls"> Go Back</a> </div>
+    <span>
+        Here are the results for <span> <b> <h3> @ViewData["ElectionName"] </h3> </b></span>
+    </span>
+
+<div>
+    <table id="CompletedCandidateResult">
+        <thead>
+            <tr>
+                <th>Picture</th>
+                <th>Name</th>
+                <th>Vote Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var i in @Model)
+            {
+                <tr>
+                <td id="completeImg"> <img src="~/@i.CandidatePicturePath" alt=""> </td>
+                <td> @i.CandidateName </td>
+                <td>@i.VoteCount</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

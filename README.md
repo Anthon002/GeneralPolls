@@ -95,3 +95,33 @@ Updated Confirmation:
 	Added a "WaitForResend" page that counts down for 30 secs before allowing user to resend confirmation link
 Added a "UpdatesToCome" page containing a list of updates to be added to the project as it has been deployed "http://generalpoll.somee.com"
 Published a deployed a first draft to "somee.com"
+
+30th August
+Add CompletedPollsModel
+PollsDbModel
+	add new property DateTime EndDate{get;set;}
+	use datetime-local in createPoll.cshtml page
+use hangfire to secheduler method PollEnding() to run when EndDate has reached
+PollEnding(string pollId)
+	Send Email to creator and participants that poll has expired
+		RegisteredVoters registeredVoters = Get All RegisterVoters under current ElectionId
+		If my userId exits in registeredVoters
+		BackgroundJob.Sechedule SendEmail
+	adds Ended Poll to the CompletedPollsTable
+	removes Ended Poll from the PollsDbTable(Finally completed, Took me way too long to add this like 5 days :_) 6th September)
+ShowWinners(string pollId)
+	Get CompletedPoll from CompletedPollTable
+	gets list of Candidates
+	organize them in descending order of vote count
+	return list
+[HttpGet]CompletedElections()
+
+View
+	on the PollsPage
+	<a href="CompletedElection">Show List of Completed Election</a>
+	
+	on the CompletedElection's page
+	shows a list of compleleted Election using datatables
+	column showWinners redirects to ShowWinners page
+	shows top candidates in descending order
+	link show all candidate redirects to show all candidates

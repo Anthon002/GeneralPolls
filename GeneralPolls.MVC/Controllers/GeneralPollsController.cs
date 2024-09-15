@@ -10,10 +10,13 @@ namespace GeneralPolls.MVC.Controllers
     {
         private readonly IGeneralPolls _generalPolls;
         private readonly IUserAuthenticationService _userAuthenticationService;
-        public GeneralPollsController(IGeneralPolls generalPolls, IUserAuthenticationService userauthenticationService)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
+        public GeneralPollsController(IGeneralPolls generalPolls, IUserAuthenticationService userauthenticationService, IHttpContextAccessor httpContextAccessor)
         {
             _generalPolls = generalPolls;
             _userAuthenticationService = userauthenticationService;
+            _httpContextAccessor = httpContextAccessor;
         }
         
         public bool IsConfirmed()
@@ -24,7 +27,7 @@ namespace GeneralPolls.MVC.Controllers
 
 
         [HttpGet]
-        public async Task<ActionResult<List<PollsViewModel>>> PollsPage()
+        public async Task<ActionResult<List<PollsViewModel>>> PollsPage(string errorMessage = "")
         {
             if(!User.Identity.IsAuthenticated)
             {
@@ -38,6 +41,7 @@ namespace GeneralPolls.MVC.Controllers
             }
 
             ViewData["UserAuthenticated"] = "true";
+            ViewData["ErrorMessage"] = errorMessage;
             var user = User.Identity;
 
             var userid = User.Identity.GetUserId().ToString();
@@ -97,12 +101,14 @@ namespace GeneralPolls.MVC.Controllers
                 ViewData["PollNameNull"] = "Your Poll Does Not Have A Name";
                 return View(null);
             }
-            string response = _generalPolls.CreateNewPoll(newPoll,UserId) ;
+            HttpRequest request = _httpContextAccessor.HttpContext.Request;
+            string winnerMessage =  $"has Ended. Go and See who the winner is {request.Scheme}://{request.Host}/GeneralPolls/ShowElectionWinners/";
+            string response = await _generalPolls.CreateNewPoll(newPoll,UserId, winnerMessage);
 
             if (response != null)
             {
                 var userName = User.Identity.Name;
-                await _generalPolls.AssignCustomRoles(userName,response);
+                await _generalPolls.AssignCustomRoles(userName,response); //Change this to If user.Id == newPoll.UserId {show "AddCandidate" and "DeletePoll"}
             }
             return RedirectToAction(nameof(PollsPage));
         }
@@ -128,11 +134,17 @@ namespace GeneralPolls.MVC.Controllers
             ViewData["Unregistered"] = TempData["Unregistered"];
             ViewData["Image_Path"] = TempData["Image_Path"] as String;
             var voter = await _userAuthenticationService.GetRegisteredVoter(Id);
-            //ViewData["CurrentVoterID"] = voter;
-            if (User.IsInRole(Id))
+            PollsViewModel poll = await _generalPolls.GetPoll(Id);
+            string userId = User.Identity.GetUserId();
+            if (userId == poll.UserId)
             {
                 ViewData["ShowAddCandidate"] = "True";
             }
+            //ViewData["CurrentVoterID"] = voter;
+            // if (User.IsInRole(Id))
+            // {
+            //     ViewData["ShowAddCandidate"] = "True";
+            // }
             // var confirmationstatus = IsConfirmed();
             // if (confirmationstatus == false)
             // {
@@ -312,6 +324,59 @@ namespace GeneralPolls.MVC.Controllers
         public async Task<ActionResult> UpdatesToCome()
         {
             return View();
+        }
+        [HttpGet]
+        public async Task<ActionResult> CompletedElectionsList()
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Authentication");
+            }
+            var confirmationstatus = IsConfirmed();
+            if (confirmationstatus == false)
+            {
+                return RedirectToAction("ConfirmEmail","Authentication");
+            }
+            List<CompletedPollsViewModel> completedPolls = await _generalPolls.GetCompletedPolls();
+            return Json(completedPolls);
+        }
+        [HttpGet]
+        public async Task<ActionResult> CompletedElections()
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Authentication");
+            }
+            var confirmationstatus = IsConfirmed();
+            if (confirmationstatus == false)
+            {
+                return RedirectToAction("ConfirmEmail","Authentication");
+            }
+
+            return View();
+        }
+        [HttpGet]
+        public async Task<ActionResult<CandidateViewModel>> ShowElectionWinners(string Id)
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login", "Authentication");
+            }
+            var confirmationstatus = IsConfirmed();
+            if (confirmationstatus == false)
+            {
+                return RedirectToAction("ConfirmEmail","Authentication");
+            }
+
+            if(Id == null)
+            {
+                return RedirectToAction("PollsPage",new{message = "This Election is Invalid"});
+            }
+            CompletedPollsViewModel completedPoll = await _generalPolls.GetCompletedPoll(Id);
+            ViewData["ElectionName"] = completedPoll.ElectionName;
+            List<CandidateViewModel> candidateResultList = await _generalPolls.GetCandidateResultList(Id);
+            return View(candidateResultList);
+
         }
     }
 }

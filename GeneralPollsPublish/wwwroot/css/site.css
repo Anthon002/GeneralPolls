@@ -66,3 +66,26 @@
     list-style: none;
     margin-left: 10vw;
 }
+#CompletedCandidateResult{
+    position: absolute;
+    border: 2px solid black;
+    width: 90vw;
+    left:5vw;
+}
+#CompletedCandidateResult thead th{
+    color: green;
+    border: solid 1px black;
+}
+#CompletedCandidateResult tbody td{
+    border: 1px solid black;
+}
+#CompletedCandidateResult tbody td{
+    height: 10vh;
+    
+}
+#CompletedCandidateResult img {
+    width: 80px;
+}
+#completeImg{
+    width: 10px;
+}
